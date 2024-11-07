@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bbmutx2yjibsg"]
+[gd_scene load_steps=41 format=3 uid="uid://bbmutx2yjibsg"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_7tiko"]
 [ext_resource type="Texture2D" uid="uid://5u87831ffoki" path="res://Artwork/D_Temp_SpriteSheet.png" id="1_adasu"]
@@ -253,6 +253,9 @@ animations = [{
 "speed": 32.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_n6o00"]
+radius = 20.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 12
 script = ExtResource("1_7tiko")
@@ -271,3 +274,10 @@ rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_hjacc")
 animation = &"idle"
 frame_progress = 0.293121
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_n6o00")

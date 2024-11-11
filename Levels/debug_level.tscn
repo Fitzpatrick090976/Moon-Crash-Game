@@ -29,7 +29,8 @@ tile_set = ExtResource("2_72gj5")
 position = Vector2(32, 32)
 
 [node name="DialogueArea" parent="DebugNpc" instance=ExtResource("5_o5ak1")]
-dialogue_key = "scientist"
+dialogue_key = "admiration"
+dialogue_path = "res://Dialogue/JSON Files/scientist.json"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc/DialogueArea"]
 shape = SubResource("CircleShape2D_hjhph")

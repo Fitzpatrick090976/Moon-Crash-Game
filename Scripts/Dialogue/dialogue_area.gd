@@ -8,10 +8,12 @@ extends Area2D
 @export var dialogue_path: String  # Path to each NPC's unique JSON file
 
 
+#func _ready() -> void:
+	#JsonManager.load_json(dialogue_path)  # Load the specific NPC's dialogue
+
 func _input(event: InputEvent) -> void:
 	if mouse_colliding and player_colliding and event.is_action_pressed("left_click"):
-		JsonManager.load_json(dialogue_path)  # Load the specific NPC's dialogue
-		SignalBus.emit_signal("show_dialogue", dialogue_key)
+		SignalBus.emit_signal("show_dialogue", dialogue_key, dialogue_path)
 
 
 # DETECT USER MOUSE MOVEMENT

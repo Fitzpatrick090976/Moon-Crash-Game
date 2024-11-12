@@ -1,3 +1,3 @@
 extends Node
 
-signal show_dialogue(key)
+signal show_dialogue(key, path)

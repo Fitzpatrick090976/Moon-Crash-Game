@@ -1,43 +1,45 @@
 extends CanvasLayer
 
+
 var current_line_index = 0
 var dialogue_lines = []
+var dialogue_playing = false
+
 
 func _ready() -> void:
 	SignalBus.show_dialogue.connect(_on_show_dialogue)
-	#print(get_tree().current_scene.default_dialogue())  # default dialogue
 
-func _on_show_dialogue(key):
-	#var json_path = "res://Dialogue/JSON Files/scientist.json"
-	#JsonManager.load_json(json_path)
-	# Debug: loaded JSON data
-	#print("Loaded JSON data:", JsonManager.data)
-	
-	# Load dialogue lines for the given key
+
+func _on_show_dialogue(key, path):
+	# LOAD NPC'S JSON & INIT DIALOGUE
+	JsonManager.load_json(path)
 	if JsonManager.data.has(key):
 		dialogue_lines = JsonManager.data[key]
-		current_line_index = 0
-		show_current_line()  # Show the first line
+		show_current_line()
 	else:
-		print("Key not found in JSON data:", key)
+		push_error("dialogue_player: key does not exist in JSON file")
 
 func show_current_line():
-	# Display the current line or signal the end of dialogue
-	if current_line_index < dialogue_lines.size():
-		print(dialogue_lines[current_line_index]) # Display the current line
-		current_line_index += 1
-	#else:
-		#print("End of dialogue.")
+	# Initiate dialogue interaction
+	print(dialogue_lines[current_line_index])
+	dialogue_playing = true
+	
+	
 
 func advance_dialogue():
-	# Move to the next line if there are more lines
-	if current_line_index < dialogue_lines.size() - 1:
-		current_line_index += 1
-		show_current_line()
-	#else:
-		#print("End of dialogue.")  # Only printed once when dialogue ends
+	# ADVANCE AND QUIT DIALOGUE
+	current_line_index += 1
+	# If out of bounds
+	if current_line_index > dialogue_lines.size() - 1:
+		dialogue_playing = false
+		# TODO
+		# Remove dialogue box sprite from screen
+		current_line_index = 0 # Reset index for future interactions
+	else:
+		print(dialogue_lines[current_line_index])
 
 func _input(event):
-	# Detect left-click to advance dialogue
-	if event.is_action_pressed("left_click"):
+	# While in dialogue,
+	# detect input from user to advance or terminate dialogue
+	if event.is_action_pressed("advance") and dialogue_playing:
 		advance_dialogue()

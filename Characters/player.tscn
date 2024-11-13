@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://bbmutx2yjibsg"]
+[gd_scene load_steps=42 format=3 uid="uid://bbmutx2yjibsg"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_7tiko"]
 [ext_resource type="Texture2D" uid="uid://5u87831ffoki" path="res://Artwork/D_Temp_SpriteSheet.png" id="1_adasu"]
 [ext_resource type="Script" path="res://Scripts/Characters/rotation_marker.gd" id="2_ip37x"]
+[ext_resource type="PackedScene" uid="uid://mjaq6sch1x1p" path="res://Dialogue/dialogue_player.tscn" id="4_igv5b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bksyu"]
 
@@ -281,3 +282,5 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_n6o00")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_igv5b")]

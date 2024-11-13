@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cf8npthwuqve4"]
+[gd_scene load_steps=9 format=4 uid="uid://cf8npthwuqve4"]
 
 [ext_resource type="TileSet" uid="uid://d346lsbr1etk8" path="res://Tilemap/temp_floor.tres" id="1_n7xwf"]
 [ext_resource type="Script" path="res://Scripts/Levels/debug_level.gd" id="1_w0evc"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bbmutx2yjibsg" path="res://Characters/player.tscn" id="2_j620k"]
 [ext_resource type="PackedScene" uid="uid://ch0cfwyq1h84a" path="res://Characters/debug_npc.tscn" id="4_kyqog"]
 [ext_resource type="PackedScene" uid="uid://1ooot67jckx7" path="res://Dialogue/dialogue_area.tscn" id="5_o5ak1"]
-[ext_resource type="PackedScene" uid="uid://mjaq6sch1x1p" path="res://Dialogue/dialogue_player.tscn" id="6_dnn68"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hjhph"]
 radius = 20.0
@@ -37,8 +36,6 @@ dialogue_path = "res://Dialogue/JSON Files/scientist.json"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc/DialogueArea"]
 shape = SubResource("CircleShape2D_hjhph")
-
-[node name="DialoguePlayer" parent="." instance=ExtResource("6_dnn68")]
 
 [node name="DebugNpc2" parent="." instance=ExtResource("4_kyqog")]
 position = Vector2(32, -32)

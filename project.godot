@@ -54,6 +54,8 @@ right={
 2d_physics/layer_2="Dialogue"
 2d_physics/layer_3="Npc"
 2d_physics/layer_4="Walls/Physical"
+2d_physics/layer_28="Fog"
+2d_physics/layer_30="Door Opening"
 
 [rendering]
 

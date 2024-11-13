@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqajwhf7ftrfb"
-path="res://.godot/imported/D_Temp_WallEdges_3.png-99e36863bf5cecf67ae75a767323e005.ctex"
+uid="uid://cnssbbee22ekd"
+path="res://.godot/imported/D_CharacterBody.png-a7d21d72f9647e3e9ecd14d4fab3f132.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/D_Temp_WallEdges_3.png"
-dest_files=["res://.godot/imported/D_Temp_WallEdges_3.png-99e36863bf5cecf67ae75a767323e005.ctex"]
+source_file="res://Artwork/Characters/D_CharacterBody.png"
+dest_files=["res://.godot/imported/D_CharacterBody.png-a7d21d72f9647e3e9ecd14d4fab3f132.ctex"]
 
 [params]
 

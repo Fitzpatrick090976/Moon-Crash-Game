@@ -1,40 +1,41 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch0cfwyq1h84a"]
+[gd_scene load_steps=10 format=3 uid="uid://ch0cfwyq1h84a"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/debug_npc.gd" id="1_0fdyl"]
-[ext_resource type="Texture2D" uid="uid://co5wxx2kb623" path="res://Artwork/D_Temp_Npc.png" id="2_datna"]
+[ext_resource type="Script" path="res://Scripts/Characters/npc_rotation_marker.gd" id="2_b84jm"]
+[ext_resource type="Texture2D" uid="uid://b4jstvl7kkvd6" path="res://Artwork/Characters/D_NPCCharacterBody.png" id="2_kv66c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dj57w"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jhut6"]
-atlas = ExtResource("2_datna")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd0sm"]
+atlas = ExtResource("2_kv66c")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3gaps"]
-atlas = ExtResource("2_datna")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd5nk"]
+atlas = ExtResource("2_kv66c")
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pthgr"]
-atlas = ExtResource("2_datna")
-region = Rect2(0, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi6k4"]
+atlas = ExtResource("2_kv66c")
+region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_by837"]
-atlas = ExtResource("2_datna")
-region = Rect2(32, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pyjf"]
+atlas = ExtResource("2_kv66c")
+region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ougo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jhut6")
+"texture": SubResource("AtlasTexture_nd0sm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3gaps")
+"texture": SubResource("AtlasTexture_vd5nk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pthgr")
+"texture": SubResource("AtlasTexture_fi6k4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_by837")
+"texture": SubResource("AtlasTexture_1pyjf")
 }],
 "loop": false,
 "name": &"idle",
@@ -50,8 +51,9 @@ script = ExtResource("1_0fdyl")
 shape = SubResource("CircleShape2D_dj57w")
 
 [node name="NpcRotationMarker" type="Marker2D" parent="."]
+script = ExtResource("2_b84jm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NpcRotationMarker"]
-rotation = 1.5708
+rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_4ougo")
 animation = &"idle"

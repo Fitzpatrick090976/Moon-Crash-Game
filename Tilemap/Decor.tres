@@ -1,9 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d346lsbr1etk8"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://p4n60nrc6o2y"]
 
-[ext_resource type="Texture2D" uid="uid://cfxg1qehchduj" path="res://Artwork/D_Temp_Tileset.png" id="1_o2x7t"]
+[ext_resource type="Texture2D" uid="uid://dst17lp8vyryb" path="res://Artwork/Headquarters/D_HQWallsKnobs.png" id="1_eisd0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aeefx"]
-texture = ExtResource("1_o2x7t")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvp0o"]
+texture = ExtResource("1_eisd0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -44,4 +44,4 @@ texture_region_size = Vector2i(32, 32)
 
 [resource]
 tile_size = Vector2i(32, 32)
-sources/3 = SubResource("TileSetAtlasSource_aeefx")
+sources/0 = SubResource("TileSetAtlasSource_wvp0o")

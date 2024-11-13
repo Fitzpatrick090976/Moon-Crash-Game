@@ -11,6 +11,10 @@ var is_walking = false
 
 
 func _physics_process(delta: float) -> void:
+	
+	
+	# EMIT POSITION SIGNAL
+	SignalBus.get_player_position.emit(global_position)
 
 	var x_direction := Input.get_axis("left", "right")
 	var y_direction := Input.get_axis("up", "down")

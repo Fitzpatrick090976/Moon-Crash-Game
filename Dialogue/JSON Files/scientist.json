@@ -1,14 +1,43 @@
 {
 	"debug_level": [
-		"Good afternoon Dr. Warren",
-		"The weather is nice today, don't you think?"
+		{
+			"type": "text",
+			"content": "Good afternoon Dr. Warren"
+		},
+		{
+			"type": "text",
+			"content": "The weather is nice today, don't you think?"
+		}
 	],
 	"admiration": [
-		"You're a hero, sir",
-		"I've got your back"
+		{
+			"type": "text",
+			"content": "You're a hero, sir"
+		},
+		{
+			"type": "choice",
+			"options": [
+				{
+					"text": "Thank them",
+					"next_key": "gratitude"
+				},
+				{
+					"text": "Deny it",
+					"next_key": "denial"
+				}
+			]
+		}
 	],
-	"disgust": [
-		"I can't believe you'd do such a terrible thing",
-		"Don't even look at me"
+	"gratitude": [
+		{
+			"type": "text",
+			"content": "Thank you, I appreciate it."
+		}
+	],
+	"denial": [
+		{
+			"type": "text",
+			"content": "I'm just doing my duty."
+		}
 	]
 }

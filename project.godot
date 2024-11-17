@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Moon Crash Game"
-run/main_scene="res://Levels/debug_level.tscn"
+run/main_scene="res://Levels/headquarters_demo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

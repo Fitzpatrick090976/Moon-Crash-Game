@@ -45,7 +45,6 @@ func _physics_process(delta: float) -> void:
 		curr_collision_state = CollisionState.INIT
 		regular_body = get_overlapping_bodies()[0]
 		SignalBus.activate_tilemap.emit(regular_body)
-		print(regular_body)
 	
 	
 	prev_overlap_bodies = curr_overlap_bodies

@@ -1,48 +1,35 @@
-[gd_scene load_steps=9 format=4 uid="uid://cf8npthwuqve4"]
+[gd_scene load_steps=6 format=3 uid="uid://cf8npthwuqve4"]
 
-[ext_resource type="TileSet" uid="uid://d346lsbr1etk8" path="res://Tilemap/temp_floor.tres" id="1_n7xwf"]
-[ext_resource type="Script" path="res://Scripts/Levels/debug_level.gd" id="1_w0evc"]
-[ext_resource type="TileSet" uid="uid://bjjq4jq64kqu8" path="res://Tilemap/temp_walls.tres" id="2_72gj5"]
 [ext_resource type="PackedScene" uid="uid://bbmutx2yjibsg" path="res://Characters/player.tscn" id="2_j620k"]
+[ext_resource type="PackedScene" path="res://Dialogue/dialogue_area.tscn" id="3_7hutw"]
+[ext_resource type="PackedScene" uid="uid://byiq6ibhxpgv6" path="res://Dialogue/temp_dialogue_player.tscn" id="4_1oc58"]
 [ext_resource type="PackedScene" uid="uid://ch0cfwyq1h84a" path="res://Characters/debug_npc.tscn" id="4_kyqog"]
-[ext_resource type="PackedScene" uid="uid://1ooot67jckx7" path="res://Dialogue/dialogue_area.tscn" id="5_o5ak1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hjhph"]
-radius = 20.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_o4y2w"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrtg5"]
 radius = 20.0
 
 [node name="DebugLevel" type="Node2D"]
-script = ExtResource("1_w0evc")
-
-[node name="Tilemap" type="Node2D" parent="."]
-
-[node name="Floor" type="TileMapLayer" parent="Tilemap"]
-tile_map_data = PackedByteArray("AAD/////AAACAAIAAAD//wAAAAACAAIAAAAAAP//AAACAAIAAAAAAAAAAAACAAIAAAD+//7/AAACAAIAAAD+////AAACAAIAAAD+/wAAAAACAAIAAAD+/wEAAAACAAIAAAD///7/AAACAAIAAAD//wEAAAACAAIAAAAAAP7/AAACAAIAAAAAAAEAAAACAAIAAAABAP7/AAACAAIAAAABAP//AAACAAIAAAABAAAAAAACAAIAAAABAAEAAAACAAIAAAD9//3/AAACAAIAAAD9//7/AAACAAIAAAD9////AAACAAIAAAD9/wAAAAACAAIAAAD9/wEAAAACAAIAAAD9/wIAAAACAAIAAAD+//3/AAACAAIAAAD+/wIAAAACAAIAAAD///3/AAACAAIAAAD//wIAAAACAAIAAAAAAP3/AAACAAIAAAAAAAIAAAACAAIAAAABAP3/AAACAAIAAAABAAIAAAACAAIAAAACAP3/AAACAAIAAAACAP7/AAACAAIAAAACAP//AAACAAIAAAACAAAAAAACAAIAAAACAAEAAAACAAIAAAACAAIAAAACAAIAAAA=")
-tile_set = ExtResource("1_n7xwf")
-
-[node name="Walls" type="TileMapLayer" parent="Tilemap"]
-tile_set = ExtResource("2_72gj5")
 
 [node name="Player" parent="." instance=ExtResource("2_j620k")]
 
 [node name="DebugNpc" parent="." instance=ExtResource("4_kyqog")]
 position = Vector2(32, 32)
 
-[node name="DialogueArea" parent="DebugNpc" instance=ExtResource("5_o5ak1")]
-dialogue_key = "admiration"
-dialogue_path = "res://Dialogue/JSON Files/scientist.json"
+[node name="DialogueArea" parent="DebugNpc" instance=ExtResource("3_7hutw")]
+dialogue_key = "debug1/init"
+dialogue_path = "res://Dialogue/JSON Files/debug1.json"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc/DialogueArea"]
-shape = SubResource("CircleShape2D_hjhph")
+shape = SubResource("CircleShape2D_jrtg5")
 
 [node name="DebugNpc2" parent="." instance=ExtResource("4_kyqog")]
-position = Vector2(32, -32)
+position = Vector2(-32, -32)
 
-[node name="DialogueArea" parent="DebugNpc2" instance=ExtResource("5_o5ak1")]
-dialogue_key = "scientist"
-dialogue_path = "res://Dialogue/JSON Files/debug_dialogue.json"
+[node name="DialogueArea" parent="DebugNpc2" instance=ExtResource("3_7hutw")]
+dialogue_key = "debug2/init"
+dialogue_path = "res://Dialogue/JSON Files/debug2.json"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc2/DialogueArea"]
-shape = SubResource("CircleShape2D_o4y2w")
+shape = SubResource("CircleShape2D_jrtg5")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_1oc58")]

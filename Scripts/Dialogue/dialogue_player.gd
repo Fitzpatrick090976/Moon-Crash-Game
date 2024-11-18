@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _on_show_dialogue(key, path):
 	# LOAD NPC'S JSON & INIT DIALOGUE
-	JsonManager.load_json(path)
+	JsonManager.load_json(path) # Convert JSON to dict and store in JsonManager
 	if JsonManager.data.has(key):
 		current_key 	= key
 		dialogue_data = JsonManager.data

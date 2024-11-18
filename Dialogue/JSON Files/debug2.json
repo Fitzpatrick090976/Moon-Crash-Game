@@ -1,0 +1,34 @@
+{
+	"debug2/init": [
+		{
+			"type": "text",
+			"text": "Good afternoon"
+		},
+		{
+			"type": "text",
+			"text": "It's a beautiful day, isn't it?"
+		},
+	],
+	"response/debug1/init/yes": [
+		{
+			"type": "text",
+			"text": "I just heard that you like music"
+		},
+		{
+			"type": "text",
+			"text": "Rock on, brother man!"
+		}
+	],
+
+	"response/debug1/init/no": [
+		{
+			"type": "text",
+			"text": "Wait, you don't like music?"
+		},
+		{
+			"type": "text",
+			"text": "That's weird as hell, man. Who doesn't like music?"
+		}
+	]
+	
+}

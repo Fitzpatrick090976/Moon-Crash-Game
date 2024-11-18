@@ -1,0 +1,37 @@
+{
+	"debug1/init": [
+		{
+			"type": "text",
+			"text": "Hello"
+		},
+		{
+			"type": "text",
+			"text": "Do you like music?"
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "Yes",
+					"response": "response/debug1/init/yes"
+				},
+				{
+					"answer": "No",
+					"response": "response/debug1/init/no"
+				}
+			]
+		},
+	],
+	"response/debug1/init/yes": [
+		{
+			"type": "text",
+			"text": "Me too!"
+		}
+	],
+	"response/debug1/init/no": [
+		{
+			"type": "text",
+			"text": "Don't talk to me"
+		}
+	]
+}

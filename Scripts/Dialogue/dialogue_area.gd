@@ -18,8 +18,9 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if mouse_colliding and player_colliding and event.is_action_pressed("left_click"):
-		SignalBus.emit_signal("show_dialogue", dialogue_key, dialogue_path)
-		my_dialogue_playing = true
+		if not my_dialogue_playing:
+			SignalBus.emit_signal("show_dialogue", dialogue_key, dialogue_path)
+			my_dialogue_playing = true
 
 
 # DETECT USER MOUSE MOVEMENT

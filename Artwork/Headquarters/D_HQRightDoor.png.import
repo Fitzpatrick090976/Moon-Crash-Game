@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0nq5abx24tg3"
-path="res://.godot/imported/D_Temp_WallCorners.png-79e9ee4bfab4b9802addf1573fb3def0.ctex"
+uid="uid://b1msyvgnf8ovr"
+path="res://.godot/imported/D_HQRightDoor.png-e7f17abe164f3f1f0fd549ccc7e0ecef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/D_Temp_WallCorners.png"
-dest_files=["res://.godot/imported/D_Temp_WallCorners.png-79e9ee4bfab4b9802addf1573fb3def0.ctex"]
+source_file="res://Artwork/Headquarters/D_HQRightDoor.png"
+dest_files=["res://.godot/imported/D_HQRightDoor.png-e7f17abe164f3f1f0fd549ccc7e0ecef.ctex"]
 
 [params]
 

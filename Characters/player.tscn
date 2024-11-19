@@ -1,10 +1,16 @@
-[gd_scene load_steps=41 format=3 uid="uid://bbmutx2yjibsg"]
+[gd_scene load_steps=46 format=3 uid="uid://bbmutx2yjibsg"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_7tiko"]
-[ext_resource type="Texture2D" uid="uid://5u87831ffoki" path="res://Artwork/D_Temp_SpriteSheet.png" id="1_adasu"]
+[ext_resource type="Texture2D" uid="uid://5u87831ffoki" path="res://Artwork/Temp/D_Temp_SpriteSheet.png" id="1_adasu"]
 [ext_resource type="Script" path="res://Scripts/Characters/rotation_marker.gd" id="2_ip37x"]
+[ext_resource type="Texture2D" uid="uid://cnssbbee22ekd" path="res://Artwork/D_CharacterBody.png" id="3_h756r"]
+[ext_resource type="Script" path="res://Scripts/Characters/fog_detection.gd" id="5_e4vqf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bksyu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk60d"]
+atlas = ExtResource("3_h756r")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xsku5"]
 load_path = "res://.godot/imported/D_Temp_SpriteSheet.png-94284c0eff148447903805cff85f6c9c.ctex"
@@ -141,14 +147,26 @@ region = Rect2(192, 96, 32, 32)
 atlas = ExtResource("1_adasu")
 region = Rect2(224, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8cbc"]
+atlas = ExtResource("3_h756r")
+region = Rect2(0, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjacc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk60d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yj58m")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"prev_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -249,12 +267,22 @@ animations = [{
 "texture": SubResource("AtlasTexture_4v7nv")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"prev_walk",
 "speed": 32.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8cbc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n6o00"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgsmw"]
 radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7anln"]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 12
@@ -270,14 +298,21 @@ zoom = Vector2(4, 4)
 script = ExtResource("2_ip37x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RotationMarker"]
-rotation = 1.5708
+rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_hjacc")
-animation = &"idle"
-frame_progress = 0.293121
+animation = &"walk"
 
-[node name="InteractionArea" type="Area2D" parent="."]
-collision_layer = 2
+[node name="DoorOpener" type="Area2D" parent="."]
+collision_layer = 536870912
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-shape = SubResource("CircleShape2D_n6o00")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorOpener"]
+shape = SubResource("CircleShape2D_mgsmw")
+
+[node name="FogDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 134217728
+script = ExtResource("5_e4vqf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FogDetection"]
+shape = SubResource("CircleShape2D_7anln")

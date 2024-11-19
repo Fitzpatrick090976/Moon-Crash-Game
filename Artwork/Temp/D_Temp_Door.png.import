@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lb62ofje72wm"
-path="res://.godot/imported/D_Temp_WallKnobs.png-eb2714ecd0b8f4046304855b383a66c3.ctex"
+uid="uid://xdfuc7ux1gh6"
+path="res://.godot/imported/D_Temp_Door.png-4b339288c50a9f843fb87544bc8772a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/D_Temp_WallKnobs.png"
-dest_files=["res://.godot/imported/D_Temp_WallKnobs.png-eb2714ecd0b8f4046304855b383a66c3.ctex"]
+source_file="res://Artwork/Temp/D_Temp_Door.png"
+dest_files=["res://.godot/imported/D_Temp_Door.png-4b339288c50a9f843fb87544bc8772a2.ctex"]
 
 [params]
 

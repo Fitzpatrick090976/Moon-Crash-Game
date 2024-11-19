@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cxuijbwsorosc" path="res://Artwork/Headquarters/D_HQWalls_4.png" id="6_84o2c"]
 [ext_resource type="TileSet" uid="uid://p4n60nrc6o2y" path="res://Tilemap/Decor.tres" id="7_tg8ic"]
 [ext_resource type="PackedScene" uid="uid://ch0cfwyq1h84a" path="res://Characters/debug_npc.tscn" id="9_ufuef"]
-[ext_resource type="PackedScene" uid="uid://cdpbkuqbc1ybq" path="res://Tilemap/Interactive Tiles/door.tscn" id="12_pliob"]
+[ext_resource type="PackedScene" uid="uid://cdpbkuqbc1ybq" path="res://Tilemap/Interactive Tiles/door.tscn" id="12_vl2mi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fm3r8"]
 texture = ExtResource("3_crome")
@@ -387,27 +387,27 @@ position = Vector2(256, 64)
 [node name="Doors" type="Node2D" parent="."]
 z_index = 90
 
-[node name="Door" parent="Doors" instance=ExtResource("12_pliob")]
-position = Vector2(0, -96)
-
-[node name="Door2" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(-224, -96)
 
-[node name="Door3" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door2" parent="Doors" instance=ExtResource("12_vl2mi")]
+position = Vector2(0, -96)
+
+[node name="Door3" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(224, -96)
 
-[node name="Door4" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door4" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(-160, -160)
 rotation = 1.5708
 
-[node name="Door5" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door5" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(160, -160)
 rotation = 1.5708
 
-[node name="Door6" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door6" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(-160, 0)
 rotation = 1.5708
 
-[node name="Door7" parent="Doors" instance=ExtResource("12_pliob")]
+[node name="Door7" parent="Doors" instance=ExtResource("12_vl2mi")]
 position = Vector2(160, 0)
 rotation = 1.5708

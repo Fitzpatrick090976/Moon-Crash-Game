@@ -1,0 +1,14 @@
+{
+	"magenta-day_one-default": [
+		{
+			"type": "text",
+			"text": "Dr Pink, your tardiness has been noted",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Take your seat, please",
+			"speaker": "magenta",
+		},
+	],
+}

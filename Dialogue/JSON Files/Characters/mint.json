@@ -1,0 +1,14 @@
+{
+	"mint-day_one-default": [
+		{
+			"type": "text",
+			"text": "Do not mind the others – I'm sure you came here as fast as you could, Dr Pink",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "In any event, you're here now. That's all that matters",
+			"speaker": "mint",
+		},
+	],
+}

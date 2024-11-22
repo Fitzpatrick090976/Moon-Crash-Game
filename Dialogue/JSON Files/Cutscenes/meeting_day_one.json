@@ -1,0 +1,28 @@
+{
+	"meeting_day_one-default": [
+		{
+			"type": "text",
+			"text": "(Begin the meeting?)",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "Yes",
+					"response": "meeting_day_one-start",
+				},
+				{
+					"answer": "I'm not ready",
+					"response": "none",
+				},
+			],
+		},
+	],
+	
+	"meeting_day_one-start": [
+		{
+			"type": "cmd",
+			"cmd": "start"
+		},
+	],
+}

@@ -1,0 +1,14 @@
+{
+	"blue-day_one-default": [
+		{
+			"type": "text",
+			"text": "Ah, here he is – the man of the hour. I do hope your brilliant solution is worth the wait",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "I myself have a few ideas, should yours prove to be insufficient",
+			"speaker": "blue",
+		},
+	],
+}

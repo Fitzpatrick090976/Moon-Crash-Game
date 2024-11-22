@@ -1,0 +1,14 @@
+{
+	"yellow-day_one-default": [
+		{
+			"type": "text",
+			"text": "O-oh good... you're finally here",
+			"speaker": "yellow",
+		},
+		{
+			"type": "text",
+			"text": "We've all been w-waiting to hear your solution... you do have one, d-don't you?",
+			"speaker": "yellow",
+		},
+	],
+}

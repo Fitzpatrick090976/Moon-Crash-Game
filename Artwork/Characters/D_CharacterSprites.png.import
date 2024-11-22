@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmevagwjcwwkk"
-path="res://.godot/imported/D_HQChair.png-8d5aef164ce5173ed3513b9d5ca7930d.ctex"
+uid="uid://csvnb0gsu51h3"
+path="res://.godot/imported/D_CharacterSprites.png-72b0e3dac38d8d61a86825d89527635b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/Headquarters/D_HQChair.png"
-dest_files=["res://.godot/imported/D_HQChair.png-8d5aef164ce5173ed3513b9d5ca7930d.ctex"]
+source_file="res://Artwork/Characters/D_CharacterSprites.png"
+dest_files=["res://.godot/imported/D_CharacterSprites.png-72b0e3dac38d8d61a86825d89527635b.ctex"]
 
 [params]
 

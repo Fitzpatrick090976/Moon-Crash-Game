@@ -1,0 +1,14 @@
+{
+	"red-day_one-default": [
+		{
+			"type": "text",
+			"text": "You're late! On a day like this – I can't believe it",
+			"speaker": "red",
+		},
+		{
+			"type": "text",
+			"text": "Take a seat and let's get down to business",
+			"speaker": "red",
+		},
+	],
+}

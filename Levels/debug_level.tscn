@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf8npthwuqve4"]
+[gd_scene load_steps=5 format=3 uid="uid://cf8npthwuqve4"]
 
 [ext_resource type="PackedScene" uid="uid://bbmutx2yjibsg" path="res://Characters/player.tscn" id="2_j620k"]
 [ext_resource type="PackedScene" uid="uid://1ooot67jckx7" path="res://Dialogue/dialogue_area.tscn" id="3_7hutw"]
-[ext_resource type="PackedScene" uid="uid://byiq6ibhxpgv6" path="res://Dialogue/temp_dialogue_player.tscn" id="4_1oc58"]
+[ext_resource type="PackedScene" uid="uid://byiq6ibhxpgv6" path="res://Dialogue/dialogue_player.tscn" id="4_1oc58"]
 [ext_resource type="PackedScene" uid="uid://ch0cfwyq1h84a" path="res://Characters/debug_npc.tscn" id="4_kyqog"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jrtg5"]
-radius = 20.0
 
 [node name="DebugLevel" type="Node2D"]
 
@@ -17,19 +14,13 @@ position = Vector2(32, 32)
 
 [node name="DialogueArea" parent="DebugNpc" instance=ExtResource("3_7hutw")]
 dialogue_key = "debug1/init"
-dialogue_path = "res://Dialogue/JSON Files/debug1.json"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc/DialogueArea"]
-shape = SubResource("CircleShape2D_jrtg5")
+dialogue_path = "res://Dialogue/JSON Files/Debug/debug1.json"
 
 [node name="DebugNpc2" parent="." instance=ExtResource("4_kyqog")]
 position = Vector2(-32, -32)
 
 [node name="DialogueArea" parent="DebugNpc2" instance=ExtResource("3_7hutw")]
 dialogue_key = "debug2/init"
-dialogue_path = "res://Dialogue/JSON Files/debug2.json"
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="DebugNpc2/DialogueArea"]
-shape = SubResource("CircleShape2D_jrtg5")
+dialogue_path = "res://Dialogue/JSON Files/Debug/debug2.json"
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("4_1oc58")]

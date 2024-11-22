@@ -1,44 +1,132 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch0cfwyq1h84a"]
+[gd_scene load_steps=17 format=3 uid="uid://ch0cfwyq1h84a"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/debug_npc.gd" id="1_0fdyl"]
 [ext_resource type="Script" path="res://Scripts/Characters/npc_rotation_marker.gd" id="2_b84jm"]
-[ext_resource type="Texture2D" uid="uid://b4jstvl7kkvd6" path="res://Artwork/Characters/D_NPCCharacterBody.png" id="2_kv66c"]
+[ext_resource type="Texture2D" uid="uid://x5308a6isdxo" path="res://Artwork/Characters/D_DefaultCharacter.png" id="3_t0d7c"]
+[ext_resource type="Texture2D" uid="uid://csvnb0gsu51h3" path="res://Artwork/Characters/D_CharacterSprites.png" id="4_uwg5h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dj57w"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nd0sm"]
-atlas = ExtResource("2_kv66c")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf71i"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(64, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vd5nk"]
-atlas = ExtResource("2_kv66c")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fi6k4"]
-atlas = ExtResource("2_kv66c")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg4o3"]
+atlas = ExtResource("4_uwg5h")
 region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1pyjf"]
-atlas = ExtResource("2_kv66c")
-region = Rect2(64, 64, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_paoqj"]
+atlas = ExtResource("3_t0d7c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1ys5"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhawh"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28att"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6msj"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pcjm"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0qd5"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncusw"]
+atlas = ExtResource("4_uwg5h")
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ougo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nd0sm")
+"texture": SubResource("AtlasTexture_rf71i")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vd5nk")
+"texture": SubResource("AtlasTexture_vg4o3")
+}],
+"loop": true,
+"name": &"cyan",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fi6k4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1pyjf")
+"texture": SubResource("AtlasTexture_paoqj")
 }],
 "loop": false,
-"name": &"idle",
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1ys5")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhawh")
+}],
+"loop": true,
+"name": &"magenta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28att")
+}],
+"loop": true,
+"name": &"mint",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6msj")
+}],
+"loop": true,
+"name": &"orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pcjm")
+}],
+"loop": true,
+"name": &"purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0qd5")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncusw")
+}],
+"loop": true,
+"name": &"yellow",
 "speed": 5.0
 }]
 
@@ -56,4 +144,3 @@ script = ExtResource("2_b84jm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NpcRotationMarker"]
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_4ougo")
-animation = &"idle"

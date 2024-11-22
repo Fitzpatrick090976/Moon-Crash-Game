@@ -4,7 +4,17 @@ signal show_dialogue(key: String, path: String)
 
 signal choice_selected(response_key: String)
 
+signal init_dialogue()
+
 signal terminate_dialogue()
+
+signal init_cutscene()
+
+signal terminate_cutscene()
+
+signal lerp_player(dest_position: Vector2)
+
+signal lerp_camera(dest_position: Vector2)
 
 signal get_player_position(player_position: Vector2)
 

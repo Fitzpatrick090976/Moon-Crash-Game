@@ -1,0 +1,19 @@
+{
+	"purple-day_one-default": [
+		{
+			"type": "text",
+			"text": "Pink – have you talked with the others yet?",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "Listen to them speak: they will not say it. They will not utter its name, our rocky interloper",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "They are afraid, all of them. But you must have no fear",
+			"speaker": "purple",
+		},
+	],
+}

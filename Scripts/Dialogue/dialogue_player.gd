@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var text_label: Label = $MarginContainer/MarginContainer/Label
 @onready var choice_1: Button = $MarginContainer/MarginContainer/VBoxContainer/Choice1
 @onready var choice_2: Button = $MarginContainer/MarginContainer/VBoxContainer/Choice2
+@onready var panel: Panel = $MarginContainer/Panel
 
 
 
@@ -25,6 +26,7 @@ func _ready() -> void:
 
 
 func _on_show_dialogue(key: String, path: String):
+	SignalBus.init_dialogue.emit()
 	var json = JsonManager.load_json(path)
 	if json.has(key):
 		curr_key = key
@@ -45,6 +47,25 @@ func show_curr_line():
 	curr_line = dialogue_dict[curr_key][curr_line_count]
 	
 	if curr_line["type"] == "text":
+		
+		
+		# CHECK FOR SPEAKER'S IDENTITY
+		if curr_line.has("speaker"):
+			var color = curr_line["speaker"]
+			text_label.set("theme_override_colors/font_color", color_dict[color])
+			#panel.set("theme_override_styles/panel/border_color", color_dict[color])
+			#var new_stylebox_normal = panel.get_theme_stylebox("normal").duplicate()
+			#new_stylebox_normal.border_color = color_dict[color]
+			#panel.add_theme_stylebox_override("normal", new_stylebox_normal)
+
+		else:
+			text_label.set("theme_override_colors/font_color", color_dict["white"])
+			#panel.set("border_color", color_dict["white"])
+			#var new_stylebox_normal = panel.get_theme_stylebox("normal").duplicate()
+			#new_stylebox_normal.border_color = color_dict["white"]
+			#panel.add_theme_stylebox_override("normal", new_stylebox_normal)
+		
+		
 		# DISPLAY TEXT
 		dialogue_playing = true
 		choice_playing = false
@@ -53,6 +74,8 @@ func show_curr_line():
 		choice_1.visible = false
 		choice_2.visible = false
 		text_label.text = curr_line["text"]
+		
+		
 	elif curr_line["type"] == "choice":
 		# DISPLAY CHOICE
 		dialogue_playing = false
@@ -63,6 +86,14 @@ func show_curr_line():
 		choice_2.visible = true
 		choice_1.text = curr_line["choice"][0]["answer"]
 		choice_2.text = curr_line["choice"][1]["answer"]
+	
+	
+	elif curr_line["type"] == "cmd":
+		var cmd = curr_line["cmd"]
+		if cmd == "start":
+			SignalBus.init_cutscene.emit()
+		elif cmd == "end":
+			SignalBus.terminate_cutscene.emit()
 
 
 func advance_to_next_line():
@@ -70,13 +101,7 @@ func advance_to_next_line():
 	# CHECK IF OUT OF BOUNDS
 	if curr_line_count == dialogue_dict[curr_key].size():
 		# TERMINATE DIALOGUE
-		dialogue_playing = false
-		choice_playing = false
-		visible = false
-		text_label.visible = false
-		choice_1.visible = false
-		choice_2.visible = false
-		SignalBus.terminate_dialogue.emit()
+		terminate_dialogue()
 	# ELSE SHOW CURRENT LINE
 	else:
 		show_curr_line()
@@ -89,14 +114,45 @@ func _input(event: InputEvent) -> void:
 			advance_to_next_line()
 
 
-func _on_choice_1_pressed() -> void:
-	# GET RESPONSE KEY
-	var response_key = curr_line["choice"][0]["response"]
-	# EMIT SIGNAL TO ALL NPCS TO CHECK IF THEY HAVE RESPONSE KEY
-	SignalBus.choice_selected.emit(response_key)
+func _on_choice_1_pressed() -> void:	
+	button_manager(0)
+
 
 func _on_choice_2_pressed() -> void:
+	button_manager(1)
+
+
+func button_manager(index: int):
 	# GET RESPONSE KEY
-	var response_key = curr_line["choice"][1]["response"]
+	var response_key = curr_line["choice"][index]["response"]
+	# CHECK FOR NO RESPONSE
+	if response_key == "none":
+		terminate_dialogue()
 	# EMIT SIGNAL TO ALL NPCS TO CHECK IF THEY HAVE RESPONSE KEY
-	SignalBus.choice_selected.emit(response_key)
+	else:
+		SignalBus.choice_selected.emit(response_key)
+
+
+func terminate_dialogue():
+	dialogue_playing = false
+	choice_playing = false
+	visible = false
+	text_label.visible = false
+	choice_1.visible = false
+	choice_2.visible = false
+	SignalBus.terminate_dialogue.emit()
+
+
+var color_dict: Dictionary = {
+	# TODO
+	"white": Color(1, 1, 1),
+	"blue": Color(0.18, 0.41, 0.74),
+	"cyan": Color(0.18, 0.74, 0.74),
+	"green": Color(0.30, 0.74, 0.18),
+	"magenta": Color(0.63, 0.18, 0.74),
+	"mint": Color(0.45, 0.90, 0.63),
+	"orange": Color(0.90, 0.57, 0.09),
+	"purple": Color(0.30, 0.18, 0.74),
+	"red": Color(0.74, 0.18, 0.18),
+	"yellow": Color(0.90, 0.81, 0.09),
+}

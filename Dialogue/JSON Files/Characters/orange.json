@@ -1,0 +1,14 @@
+{
+	"orange-day_one-default": [
+		{
+			"type": "text",
+			"text": "Ah, Dr Pink! You have brightened my day with your presence",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "I trust that we shall soon be clinking martinis in celebration of saving the world!",
+			"speaker": "orange",
+		},
+	],
+}

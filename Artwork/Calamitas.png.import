@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4jstvl7kkvd6"
-path="res://.godot/imported/D_NPCCharacterBody.png-224e0bc71f2a9cbdb64e7f860f75fdbf.ctex"
+uid="uid://bmgtcrm1s2der"
+path="res://.godot/imported/Calamitas.png-2a6aea6b51f944ee517c561891441f5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/Characters/D_NPCCharacterBody.png"
-dest_files=["res://.godot/imported/D_NPCCharacterBody.png-224e0bc71f2a9cbdb64e7f860f75fdbf.ctex"]
+source_file="res://Artwork/Calamitas.png"
+dest_files=["res://.godot/imported/Calamitas.png-2a6aea6b51f944ee517c561891441f5e.ctex"]
 
 [params]
 

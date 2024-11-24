@@ -1,0 +1,35 @@
+{
+	"cyan-day_one-default": [
+		{
+			"type": "text",
+			"text": "Sir! Boy, am I glad to see you!",
+			"speaker": "cyan",
+		},
+		{
+			"type": "text",
+			"text": "Everybody's waiting for in the conference room... we couldn't start without you!",
+			"speaker": "cyan",
+		},
+		{
+			"type": "text",
+			"text": "I know that you'll have the solution, sir. We're counting on you",
+			"speaker": "cyan",
+		},
+	],
+	
+	"meeting_day_one-yes": [
+		{
+			"type": "text",
+			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"speaker": "cyan",
+		},
+	],
+	
+	"meeting_day_one-no": [
+		{
+			"type": "text",
+			"text": "(You have decided to not sacrifice innocent lives)",
+			"speaker": "cyan",
+		},
+	],
+}

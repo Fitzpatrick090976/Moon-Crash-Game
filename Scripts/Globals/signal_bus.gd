@@ -16,6 +16,10 @@ signal lerp_player(dest_position: Vector2)
 
 signal lerp_camera(dest_position: Vector2)
 
+signal lerp_player_finished()
+
+signal lerp_camera_finished()
+
 signal get_player_position(player_position: Vector2)
 
 signal activate_tilemap(tilemap: TileMapLayer)

@@ -5,6 +5,7 @@ func _ready() -> void:
 	SignalBus.init_dialogue.connect(_on_init_dialogue)
 	SignalBus.terminate_dialogue.connect(_on_terminate_dialogue)
 	SignalBus.lerp_player.connect(_on_lerp_player)
+	SignalBus.terminate_cutscene.connect(_on_terminate_cutscene)
 
 
 const SPEED = 150.0
@@ -15,7 +16,6 @@ var is_walking:= false
 var dialogue_playing:= false
 var cutscene_playing:= false
 var interpolation:= false
-
 var t:= 0.0
 var src: Vector2
 var dest: Vector2
@@ -59,6 +59,7 @@ func _physics_process(delta: float) -> void:
 		global_position = src.lerp(dest, t)
 		if t >= 1.0:
 			interpolation = false
+			SignalBus.lerp_player_finished.emit()
 
 
 func _on_init_dialogue():
@@ -74,3 +75,7 @@ func _on_lerp_player(dest_position: Vector2):
 	src = global_position
 	dest = dest_position
 	interpolation = true
+
+
+func _on_terminate_cutscene():
+	SignalBus.lerp_camera.emit(global_position)

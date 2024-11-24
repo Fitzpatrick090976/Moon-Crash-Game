@@ -19,6 +19,8 @@ var choice_playing := false
 
 func _ready() -> void:
 	SignalBus.show_dialogue.connect(_on_show_dialogue)
+	SignalBus.lerp_player_finished.connect(_on_lerp_player_finished)
+	SignalBus.lerp_camera_finished.connect(_on_lerp_camera_finished)
 	visible = false # INIT TO INVISIBLE
 	text_label.visible = false
 	choice_1.visible = false
@@ -91,10 +93,17 @@ func show_curr_line():
 	elif curr_line["type"] == "cmd":
 		var cmd = curr_line["cmd"]
 		if cmd == "start":
+			is_player_interpolating = true
+			is_camera_interpolating = true
+			visible = false
 			SignalBus.init_cutscene.emit()
 		elif cmd == "end":
+			is_camera_interpolating = true
+			visible = false
 			SignalBus.terminate_cutscene.emit()
-
+		elif cmd == "replace":
+			var response_key = curr_line["replace"]
+			SignalBus.choice_selected.emit(response_key)
 
 func advance_to_next_line():
 	curr_line_count += 1
@@ -110,8 +119,9 @@ func advance_to_next_line():
 func _input(event: InputEvent) -> void:
 	# REGISTER INPUT TO ADVANCE & TERMINATE DIALOGUE
 	if event.is_action_pressed("advance"):
-		if dialogue_playing:
-			advance_to_next_line()
+		if not is_player_interpolating and not is_camera_interpolating:
+			if dialogue_playing:
+				advance_to_next_line()
 
 
 func _on_choice_1_pressed() -> void:	
@@ -144,7 +154,6 @@ func terminate_dialogue():
 
 
 var color_dict: Dictionary = {
-	# TODO
 	"white": Color(1, 1, 1),
 	"blue": Color(0.18, 0.41, 0.74),
 	"cyan": Color(0.18, 0.74, 0.74),
@@ -156,3 +165,21 @@ var color_dict: Dictionary = {
 	"red": Color(0.74, 0.18, 0.18),
 	"yellow": Color(0.90, 0.81, 0.09),
 }
+
+
+# HANDLE INTERPOLATION
+
+var is_player_interpolating:= false
+var is_camera_interpolating:= false
+
+
+func _on_lerp_player_finished():
+	is_player_interpolating = false
+	if not is_camera_interpolating:
+		advance_to_next_line()
+
+
+func _on_lerp_camera_finished():
+	is_camera_interpolating = false
+	if not is_player_interpolating:
+		advance_to_next_line()

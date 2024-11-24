@@ -22,7 +22,139 @@
 	"meeting_day_one-start": [
 		{
 			"type": "cmd",
-			"cmd": "start"
+			"cmd": "start",
+		},
+		{
+			"type": "text",
+			"text": "Let the record show that Dr Pink, head of planetary defence, has now joined us",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "I call this meeting to order",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Finally! Can I start? I'll start – I think this moon business is a load of crap!",
+			"speaker": "green",
+		},
+		{
+			"type": "text",
+			"text": "I assure you it isn't, Dr Green; Calamitas will collide with our planet in less than three days from now",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "I-in three days? It was just discovered, how is that p-possible...?",
+			"speaker": "yellow",
+		},
+		{
+			"type": "text",
+			"text": "Exactly – it isn't possible!",
+			"speaker": "green",
+		},
+		{
+			"type": "text",
+			"text": "Hear, hear!",
+			"speaker": "red",
+		},
+		{
+			"type": "text",
+			"text": "It's possible because the moon is travelling at a speed previously thought impossible, more than triple anything we've seen before",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "While I agree that it is improbable, there's no use denying reality",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Indeed – it's happening and we must accept it",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Enough blathering on! I want to hear about what can be done",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Dr Pink, what is your solution? How shall we divert the moon's course?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Yes, Dr Pink – I'd really like to hear it",
+			"speaker": "cyan",
+		},
+		{
+			"type": "text",
+			"text": "Well I don't know about Pink, but from where I'm sitting there's only one feasible solution –",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Blow it to smithereens!",
+			"speaker": "red",
+		},
+		{
+			"type": "text",
+			"text": "May I finish? As I was saying, there's only one solution: X Y Z",
+			"speaker": "blue",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "Yes",
+					"response": "meeting_day_one-yes",
+				},
+				{
+					"answer": "No",
+					"response": "meeting_day_one-no",
+				}
+			]
 		},
 	],
+	
+	"meeting_day_one-yes": [
+		{
+			"type": "text",
+			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+		},
+		{
+			"type": "cmd",
+			"cmd": "end",
+		},
+		{
+			"type": "cmd",
+			"cmd": "replace",
+			"replace": "meeting_day_one-end",
+		},
+	],
+	
+	"meeting_day_one-no": [
+		{
+			"type": "text",
+			"text": "(You have decided to not sacrifice innocent lives)",
+		},
+		{
+			"type": "cmd",
+			"cmd": "end",
+		},
+		{
+			"type": "cmd",
+			"cmd": "replace",
+			"replace": "meeting_day_one-end",
+		},
+	],
+	
+	"meeting_day_one-end": [
+		{
+			"type": "text",
+			"text": "(The meeting is over)",
+		},
+	]
 }

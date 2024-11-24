@@ -1,0 +1,30 @@
+{
+	"green-day_one-default": [
+		{
+			"type": "text",
+			"text": "Of course! Right when I'm about to use up some well-deserved vacation time, I get called in for this shit. Unbelievable",
+			"speaker": "green",
+		},
+		{
+			"type": "text",
+			"text": "Let's get this charade over with. I have places to be",
+			"speaker": "green",
+		},
+	],
+	
+	"meeting_day_one-yes": [
+		{
+			"type": "text",
+			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"speaker": "green",
+		},
+	],
+	
+	"meeting_day_one-no": [
+		{
+			"type": "text",
+			"text": "(You have decided to not sacrifice innocent lives)",
+			"speaker": "green",
+		},
+	],
+}

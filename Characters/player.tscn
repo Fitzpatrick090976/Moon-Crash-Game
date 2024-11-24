@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbmutx2yjibsg"]
+[gd_scene load_steps=13 format=3 uid="uid://bbmutx2yjibsg"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_7tiko"]
+[ext_resource type="Script" path="res://Scripts/Characters/player_camera.gd" id="2_2hjw5"]
 [ext_resource type="Script" path="res://Scripts/Characters/rotation_marker.gd" id="2_ip37x"]
 [ext_resource type="Texture2D" uid="uid://csvnb0gsu51h3" path="res://Artwork/Characters/D_CharacterSprites.png" id="3_u3e17"]
 [ext_resource type="Script" path="res://Scripts/Characters/fog_detection.gd" id="5_e4vqf"]
@@ -49,8 +50,9 @@ script = ExtResource("1_7tiko")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bksyu")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="PlayerCamera" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+script = ExtResource("2_2hjw5")
 
 [node name="RotationMarker" type="Marker2D" parent="."]
 script = ExtResource("2_ip37x")

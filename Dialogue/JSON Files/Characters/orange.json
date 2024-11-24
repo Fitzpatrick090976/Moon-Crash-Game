@@ -11,4 +11,20 @@
 			"speaker": "orange",
 		},
 	],
+	
+	"meeting_day_one-yes": [
+		{
+			"type": "text",
+			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"speaker": "orange",
+		},
+	],
+	
+	"meeting_day_one-no": [
+		{
+			"type": "text",
+			"text": "(You have decided to not sacrifice innocent lives)",
+			"speaker": "orange",
+		},
+	],
 }

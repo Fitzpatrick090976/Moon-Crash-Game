@@ -225,7 +225,28 @@
 	"meeting_day_one-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not sacrifice innocent lives)",
+			"text": "Excuse me...? Dr Pink, be reasonable! We're comparing the lives of a hundred or so against the entire human race!",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Exactly, \"comparing\" – we can't just use human lives as tools to achieve our aims",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "You're kidding, right? Even when the destruction of humanity is at stake? ",
+			"speaker": "green",
+		},
+		{
+			"type": "text",
+			"text": "Blue's suggestion is blatantly immoral – Pink is absolutely right!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "And what will morality do for us when we're torn limb from limb from the moon's impact?",
+			"speaker": "red",
 		},
 		{
 			"type": "cmd",

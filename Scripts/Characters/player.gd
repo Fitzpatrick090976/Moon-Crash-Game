@@ -6,6 +6,7 @@ func _ready() -> void:
 	SignalBus.terminate_dialogue.connect(_on_terminate_dialogue)
 	SignalBus.lerp_player.connect(_on_lerp_player)
 	SignalBus.terminate_cutscene.connect(_on_terminate_cutscene)
+	SignalBus.level_end.connect(_on_level_end)
 
 
 const SPEED = 150.0
@@ -15,6 +16,7 @@ const LERP_SPEED = 0.5
 var is_walking:= false
 var dialogue_playing:= false
 var cutscene_playing:= false
+var can_move:= true
 var interpolation:= false
 var t:= 0.0
 var src: Vector2
@@ -32,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# ALLOW MOVEMENT IF NO DIALOGUE IS PLAYING
-	if not dialogue_playing:
+	if can_move:
 		var x_direction := Input.get_axis("left", "right")
 		var y_direction := Input.get_axis("up", "down")
 		
@@ -64,10 +66,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_init_dialogue():
 	dialogue_playing = true
+	can_move = false
 
 
 func _on_terminate_dialogue():
 	dialogue_playing = false
+	can_move = true
 
 
 func _on_lerp_player(dest_position: Vector2):
@@ -79,3 +83,7 @@ func _on_lerp_player(dest_position: Vector2):
 
 func _on_terminate_cutscene():
 	SignalBus.lerp_camera.emit(global_position)
+
+
+func _on_level_end():
+	can_move = false

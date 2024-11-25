@@ -101,8 +101,78 @@
 		},
 		{
 			"type": "text",
-			"text": "May I finish? As I was saying, there's only one solution: X Y Z",
+			"text": "May I finish? As I was saying, there's only one solution: alter the moon's trajectory through a transfer of momentum",
 			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "And how the hell would we do that?",
+			"speaker": "red",
+		},
+		{
+			"type": "text",
+			"text": "He's proposing that we crash a spacecraft into the moon",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Precisely – the recoil caused by ejecting debris should be more than enough to achieve satisfactory results",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "So we're s-saved? I'm not going to d-d...",
+			"speaker": "yellow",
+		},
+		{
+			"type": "text",
+			"text": "Where would we procure such a spacecraft, Dr Blue? It would have to be big enough to X Y Z",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Unfortunately, we have no choice but to use the X Y Z",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "What...? But – the X Y Z is manned by over a hundred of our own! We can't just –",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Y-yes we can! There's no other way!",
+			"speaker": "yellow",
+		},
+		{
+			"type": "text",
+			"text": "I vehemently oppose this proposition. There must be some other appropriate spacecraft",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "I'm afraid there isn't – Yellow is right for once, there really is no other way",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "(It won't make a difference)",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "This is insanity! There's good people on that ship – I will not stand for this!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Order, order! Everyone settle down, please",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Dr Pink, you're head of this department. You make the call",
+			"speaker": "magenta",
 		},
 		{
 			"type": "choice",
@@ -122,16 +192,33 @@
 	"meeting_day_one-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"text": "But – Dr Pink, you can't be serious!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Lay off it, Orange. They're giving their lives for the human race, it's an honourable death or whatever",
+			"speaker": "green",
+		},
+		{
+			"type": "text",
+			"text": "I feel sick to my stomach. This better work",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Oh, it will. Well done Dr Pink",
+			"speaker": "blue",
 		},
 		{
 			"type": "cmd",
-			"cmd": "end",
+			"cmd": "update",
+			"update": "meeting_day_two-yes",
+			"dest": "day_two",
 		},
 		{
 			"type": "cmd",
-			"cmd": "replace",
-			"replace": "meeting_day_one-end",
+			"cmd": "transition",
 		},
 	],
 	
@@ -142,19 +229,13 @@
 		},
 		{
 			"type": "cmd",
-			"cmd": "end",
+			"cmd": "update",
+			"update": "meeting_day_two-no",
+			"dest": "day_two",
 		},
 		{
 			"type": "cmd",
-			"cmd": "replace",
-			"replace": "meeting_day_one-end",
+			"cmd": "transition",
 		},
 	],
-	
-	"meeting_day_one-end": [
-		{
-			"type": "text",
-			"text": "(The meeting is over)",
-		},
-	]
 }

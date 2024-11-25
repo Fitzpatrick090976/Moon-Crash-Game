@@ -2,6 +2,9 @@ extends Node
 
 
 var manager = {
+	
+	# CHARACTERS
+	
 	"res://Dialogue/JSON Files/Characters/blue.json": {
 		"day_one": "blue-day_one-default",
 		"day_two": "",
@@ -47,4 +50,42 @@ var manager = {
 		"day_two": "",
 		"day_three": "",
 	},
+	
+	# CUTSCENES
+	
+	"res://Dialogue/JSON Files/Cutscenes/meeting_day_one.json": {
+		"day_one": "",
+	},
+	"res://Dialogue/JSON Files/Cutscenes/meeting_day_two.json": {
+		"day_two": "",
+	},
+	"res://Dialogue/JSON Files/Cutscenes/meeting_day_three.json": {
+		"day_three": "",
+	},
+	"res://Dialogue/JSON Files/Cutscenes/moon_encounter.json": {
+		
+	},
+	
+	# TEXT
+	
+	"res://Dialogue/JSON Files/Text/text_day_one.json": {
+		"day_one": "text_day_one-default",
+	},
+	"res://Dialogue/JSON Files/Text/text_day_two.json": {
+		"day_two": "",
+	},
+	"res://Dialogue/JSON Files/Text/text_day_three.json": {
+		"day_three": "",
+	}
+	
 }
+
+
+func _ready() -> void:
+	SignalBus.update_character_key_manager.connect(_on_update_character_key_manager)
+
+
+func _on_update_character_key_manager(update: String, dest: String):
+	for character in manager.keys():
+		if manager[character].has(dest):
+			manager[character][dest] = update

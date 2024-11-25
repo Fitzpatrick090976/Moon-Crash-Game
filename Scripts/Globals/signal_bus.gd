@@ -25,3 +25,11 @@ signal get_player_position(player_position: Vector2)
 signal activate_tilemap(tilemap: TileMapLayer)
 
 signal disable_tilemap(tilemap: TileMapLayer)
+
+signal level_start()
+
+signal level_end()
+
+signal transition_to_level()
+
+signal update_character_key_manager(update: String, dest: String)

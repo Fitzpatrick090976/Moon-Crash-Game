@@ -1,0 +1,31 @@
+{
+	"meeting_day_two-yes": [
+		{
+			"type": "text",
+			"text": "THE ONE HUNDRED AND TWELVE MEN AND WOMEN ABOARD THE X Y Z GAVE THEIR LIVES IN DEFENCE OF HUMANITY YESTERDAY",
+		},
+		{
+			"type": "text",
+			"text": "THEIR EFFORTS WERE NOT ENOUGH TO STOP THE MOON: CALAMITAS QUICKLY CORRECTED ITS COURSE AFTER BEING DIVERTED",
+		},
+		{
+			"type": "text",
+			"text": "YOU HAVE LESS THAN TWO DAYS REMAINING",
+		},
+	],
+	
+	"meeting_day_one-no": [
+		{
+			"type": "text",
+			"text": "THE ONE HUNDRED AND TWELVE MEN AND WOMEN ABOARD THE X Y Z DID NOT PERISH YESTERDAY",
+		},
+		{
+			"type": "text",
+			"text": "INSTEAD THEY WATCHED AS CALAMITAS SOARED PAST THEIR SPACECRAFT IN A STREAK OF FIERY BLUE TOWARDS THEIR PLANET",
+		},
+		{
+			"type": "text",
+			"text": "YOU HAVE LESS THAN TWO DAYS REMAINING",
+		},
+	]
+}

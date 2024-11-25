@@ -4,17 +4,19 @@ extends Area2D
 var my_dialogue_playing := false
 
 
-func _ready() -> void:
-	SignalBus.choice_selected.connect(_on_choice_selected)
-	SignalBus.terminate_dialogue.connect(_on_terminate_dialogue)
-	# RETRIEVE CURR KEY FROM MANAGER BASED ON CURR LEVEL
-	dialogue_key = CharacterKeyManager.manager[dialogue_path][current_level]
-
 # INIT DIALOGUE
 
 @export var current_level: String
 @export var dialogue_key: String
 @export var dialogue_path: String  # Path to each NPC's unique JSON file
+
+
+func _ready() -> void:
+	SignalBus.choice_selected.connect(_on_choice_selected)
+	SignalBus.terminate_dialogue.connect(_on_terminate_dialogue)
+	# RETRIEVE CURR KEY FROM MANAGER BASED ON CURR LEVEL
+	if dialogue_key == "": # IF NOT MANUALLY CONFIGURED
+		dialogue_key = CharacterKeyManager.manager[dialogue_path][current_level]
 
 
 func _input(event: InputEvent) -> void:

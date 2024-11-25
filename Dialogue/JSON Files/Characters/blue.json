@@ -27,4 +27,20 @@
 			"speaker": "blue",
 		},
 	],
+	
+	"meeting_day_two-yes": [
+		{
+			"type": "text",
+			"text": "(It is now day two. Yesterday you decided to sacrifice innocent lives)",
+			"speaker": "blue",
+		},
+	],
+	
+	"meeting_day_two-no": [
+		{
+			"type": "text",
+			"text": "(It is now day two. Yesterday you decided to not sacrifice innocent lives)",
+			"speaker": "blue",
+		},
+	],
 }

@@ -104,6 +104,12 @@ func show_curr_line():
 		elif cmd == "replace":
 			var response_key = curr_line["replace"]
 			SignalBus.choice_selected.emit(response_key)
+		elif cmd == "transition":
+			visible = false
+			SignalBus.level_end.emit()
+		elif cmd == "update":
+			SignalBus.update_character_key_manager.emit(curr_line["update"], curr_line["dest"])
+			advance_to_next_line()
 
 func advance_to_next_line():
 	curr_line_count += 1

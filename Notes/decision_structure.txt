@@ -1,0 +1,10 @@
+E.G. KEY: "meeting_day_one-no"
+
+"meeting_day_one": THE CURRENT DAY IN THIS SCENE
+"no": THE FIRST DECISION WAS NO
+
+
+E.G. KEY: "meeting_day_two-yes-no"
+
+"meeting_day_one": THE CURRENT DAY IN THIS SCENE
+"yes-no": THE FIRST DECISION WAS YES, SECOND WAS NO

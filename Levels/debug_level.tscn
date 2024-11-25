@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://che63p2r1xgr1"]
+
+[ext_resource type="PackedScene" uid="uid://bbmutx2yjibsg" path="res://Characters/player.tscn" id="2_j620k"]
+[ext_resource type="PackedScene" uid="uid://1ooot67jckx7" path="res://Dialogue/dialogue_area.tscn" id="3_7hutw"]
+[ext_resource type="PackedScene" uid="uid://byiq6ibhxpgv6" path="res://Dialogue/dialogue_player.tscn" id="4_1oc58"]
+[ext_resource type="PackedScene" uid="uid://ch0cfwyq1h84a" path="res://Characters/debug_npc.tscn" id="4_kyqog"]
+
+[node name="DebugLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("2_j620k")]
+
+[node name="DebugNpc" parent="." instance=ExtResource("4_kyqog")]
+position = Vector2(32, 32)
+
+[node name="DialogueArea" parent="DebugNpc" instance=ExtResource("3_7hutw")]
+dialogue_key = "debug1/init"
+dialogue_path = "res://Dialogue/JSON Files/Debug/debug1.json"
+
+[node name="DebugNpc2" parent="." instance=ExtResource("4_kyqog")]
+position = Vector2(-32, -32)
+
+[node name="DialogueArea" parent="DebugNpc2" instance=ExtResource("3_7hutw")]
+dialogue_key = "debug2/init"
+dialogue_path = "res://Dialogue/JSON Files/Debug/debug2.json"
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_1oc58")]

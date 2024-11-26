@@ -1,0 +1,71 @@
+{
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "(Begin the meeting?)",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "Yes",
+					"response": "meeting_day_three-x-yes-start",
+				},
+				{
+					"answer": "I'm not ready",
+					"response": "none",
+				},
+			],
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+	{
+			"type": "text",
+			"text": "(Begin the meeting?)",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "Yes",
+					"response": "meeting_day_three-x-no-start",
+				},
+				{
+					"answer": "I'm not ready",
+					"response": "none",
+				},
+			],
+		},
+	],
+	
+	"meeting_day_three-x-yes-start": [
+		{
+			"type": "cmd",
+			"cmd": "start",
+		},
+		{
+			"type": "text",
+			"text": "(Everything is hopeless)",
+		},
+		{
+			"type": "cmd",
+			"cmd": "transition",
+		},
+	],
+	
+	"meeting_day_three-x-no-start": [
+		{
+			"type": "cmd",
+			"cmd": "start",
+		},
+		{
+			"type": "text",
+			"text": "(Everything is hopeless)",
+		},
+		{
+			"type": "cmd",
+			"cmd": "transition",
+		},
+	],
+}

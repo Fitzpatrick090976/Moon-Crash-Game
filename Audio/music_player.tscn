@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rqecums2mvng"]
+
+[ext_resource type="Script" path="res://Scripts/Audio/music_player.gd" id="1_brijx"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_brijx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

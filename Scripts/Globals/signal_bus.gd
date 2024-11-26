@@ -26,10 +26,12 @@ signal activate_tilemap(tilemap: TileMapLayer)
 
 signal disable_tilemap(tilemap: TileMapLayer)
 
-signal level_start()
+signal level_start(curr_level: String)
 
 signal level_end()
 
 signal transition_to_level()
 
 signal update_character_key_manager(update: String, dest: String)
+
+signal moon_encounter_start()

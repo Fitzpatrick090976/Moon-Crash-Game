@@ -16,7 +16,8 @@ func _ready() -> void:
 	SignalBus.terminate_dialogue.connect(_on_terminate_dialogue)
 	# RETRIEVE CURR KEY FROM MANAGER BASED ON CURR LEVEL
 	if dialogue_key == "": # IF NOT MANUALLY CONFIGURED
-		dialogue_key = CharacterKeyManager.manager[dialogue_path][current_level]
+		if CharacterKeyManager.manager[dialogue_path][current_level] != "":
+			dialogue_key = CharacterKeyManager.manager[dialogue_path][current_level]
 
 
 func _input(event: InputEvent) -> void:

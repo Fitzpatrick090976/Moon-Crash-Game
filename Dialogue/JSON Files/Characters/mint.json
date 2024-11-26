@@ -12,18 +12,33 @@
 		},
 	],
 	
-	"meeting_day_one-yes": [
+	"meeting_day_two-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"text": "All those lives lost, and for nothing... god, this is a nightmare",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "I should have fought it harder. I should have convinced you not to do it ",
 			"speaker": "mint",
 		},
 	],
 	
-	"meeting_day_one-no": [
+	"meeting_day_two-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not sacrifice innocent lives)",
+			"text": "Oh – it's you. It's good to see you again, Pink",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Thank you for choosing to see reason yesterday. I knew you were a good man",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "We still have time... it's going to be alright",
 			"speaker": "mint",
 		},
 	],

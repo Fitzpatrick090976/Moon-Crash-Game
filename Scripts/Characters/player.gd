@@ -7,6 +7,7 @@ func _ready() -> void:
 	SignalBus.lerp_player.connect(_on_lerp_player)
 	SignalBus.terminate_cutscene.connect(_on_terminate_cutscene)
 	SignalBus.level_end.connect(_on_level_end)
+	SignalBus.moon_encounter_start.connect(_on_moon_encounter_start)
 
 
 const SPEED = 150.0
@@ -86,4 +87,8 @@ func _on_terminate_cutscene():
 
 
 func _on_level_end():
+	can_move = false
+
+
+func _on_moon_encounter_start():
 	can_move = false

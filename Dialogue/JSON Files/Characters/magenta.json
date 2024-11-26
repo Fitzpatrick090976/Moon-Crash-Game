@@ -12,18 +12,28 @@
 		},
 	],
 	
-	"meeting_day_one-yes": [
+	"meeting_day_two-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"text": "Dr Pink... nobody could have predicted that the moon would correct its course. I stand by your decision completely",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "It's impossible... it doesn't make any sense",
 			"speaker": "magenta",
 		},
 	],
 	
-	"meeting_day_one-no": [
+	"meeting_day_two-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not sacrifice innocent lives)",
+			"text": "Good morning, Dr Pink",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Let's hope that this meeting is more productive than the last, shall we?",
 			"speaker": "magenta",
 		},
 	],

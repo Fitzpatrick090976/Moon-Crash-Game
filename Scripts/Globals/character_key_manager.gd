@@ -63,7 +63,7 @@ var manager = {
 		"day_three": "",
 	},
 	"res://Dialogue/JSON Files/Cutscenes/moon_encounter.json": {
-		
+		"moon_encounter": "moon_encounter-default"
 	},
 	
 	# TEXT
@@ -76,7 +76,10 @@ var manager = {
 	},
 	"res://Dialogue/JSON Files/Text/text_day_three.json": {
 		"day_three": "",
-	}
+	},
+	"res://Dialogue/JSON Files/Text/text_moon_encounter.json": {
+		"moon_encounter": "text_moon_encounter-default"
+	},
 	
 }
 

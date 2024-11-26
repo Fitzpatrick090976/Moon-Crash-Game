@@ -1,0 +1,51 @@
+{
+	"moon_encounter-default": [
+		{
+			"type": "text",
+			"text": "(The moon hovers inches above the ground, impossibly suspended in time and space)",
+		},
+		{
+			"type": "text",
+			"text": "(All is calm and quiet as you bask in the moon's cold glow)",
+		},
+		{
+			"type": "text",
+			"text": "(Strangely, you feel the strong urge to say something)",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "My name is Dr Pink",
+					"response": "moon_encounter-choice1",
+				},
+				{
+					"answer": "I can still stop you",
+					"response": "moon_encounter-choice2",
+				}
+			]
+		},
+	],
+	
+	"moon_encounter-choice1": [
+		{
+			"type": "text",
+			"text": "(For a moment nothing happens. And then...)",
+		},
+		{
+			"type": "text",
+			"text": "INTERESTING. NICE TO MEET YOU, DR PINK. I AM A SPACE ROCK AND DO NOT HAVE A NAME",
+		},
+	],
+	
+	"moon_encounter-choice2": [
+		{
+			"type": "text",
+			"text": "(For a moment nothing happens. And then...)",
+		},
+		{
+			"type": "text",
+			"text": "YOU CANNOT",
+		},
+	],
+}

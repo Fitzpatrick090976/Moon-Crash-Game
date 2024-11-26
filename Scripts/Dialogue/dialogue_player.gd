@@ -21,6 +21,7 @@ func _ready() -> void:
 	SignalBus.show_dialogue.connect(_on_show_dialogue)
 	SignalBus.lerp_player_finished.connect(_on_lerp_player_finished)
 	SignalBus.lerp_camera_finished.connect(_on_lerp_camera_finished)
+	SignalBus.moon_encounter_start.connect(_on_moon_encounter_start)
 	visible = false # INIT TO INVISIBLE
 	text_label.visible = false
 	choice_1.visible = false
@@ -181,11 +182,20 @@ var is_camera_interpolating:= false
 
 func _on_lerp_player_finished():
 	is_player_interpolating = false
-	if not is_camera_interpolating:
+	if not is_camera_interpolating and not has_ending_happened:
 		advance_to_next_line()
 
 
 func _on_lerp_camera_finished():
 	is_camera_interpolating = false
-	if not is_player_interpolating:
+	if not is_player_interpolating and not has_ending_happened:
 		advance_to_next_line()
+
+
+# NEED TO DO THIS TO MAKE FINAL SCENE WORK
+
+var has_ending_happened:= false
+
+
+func _on_moon_encounter_start():
+	has_ending_happened = true

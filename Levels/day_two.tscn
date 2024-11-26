@@ -137,6 +137,7 @@ _data = {
 
 [node name="DayTwo" type="Node2D"]
 script = ExtResource("1_edke0")
+curr_level = "day_two"
 next_level = ExtResource("2_s3jkg")
 
 [node name="Tilemap" type="Node2D" parent="."]
@@ -152,7 +153,6 @@ tile_map_data = PackedByteArray("AAD/////AAABAAMAAAD//wAAAAABAAQAAAAAAP//AAACAAM
 tile_set = ExtResource("3_4pag6")
 
 [node name="FogManager" type="Node2D" parent="Tilemap"]
-visible = false
 z_index = 80
 script = ExtResource("4_0k72m")
 
@@ -353,7 +353,6 @@ collision_mask = 134217728
 shape = SubResource("CircleShape2D_nl180")
 
 [node name="TransitionHandler" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 script = ExtResource("16_ol7km")
 

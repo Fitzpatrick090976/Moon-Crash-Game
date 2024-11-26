@@ -1,0 +1,16 @@
+{
+	"text_moon_encounter-default": [
+		{
+			"type": "text",
+			"text": "THE WORLD OUTSIDE IS PITCH BLACK AND BITTER COLD. THE WIND ROARS AND YOU SHIVER",
+		},
+		{
+			"type": "text",
+			"text": "OCEAN WAVES AS TALL AS SKYSCRAPERS CRASH AGAINST DISTANT SHORES IN THE WAKE OF A SECOND MOON’S GRAVITATIONAL PULL",
+		},
+		{
+			"type": "text",
+			"text": "CALAMITAS HAS COME",
+		},
+	]
+}

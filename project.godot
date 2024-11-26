@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 SignalBus="*res://Scripts/Globals/signal_bus.gd"
 JsonManager="*res://Scripts/Globals/json_manager.gd"
 CharacterKeyManager="*res://Scripts/Globals/character_key_manager.gd"
+MusicPlayer="*res://Audio/music_player.tscn"
 
 [display]
 

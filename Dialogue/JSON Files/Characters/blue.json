@@ -12,26 +12,20 @@
 		},
 	],
 	
-	"meeting_day_one-yes": [
-		{
-			"type": "text",
-			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
-			"speaker": "blue",
-		},
-	],
-	
-	"meeting_day_one-no": [
-		{
-			"type": "text",
-			"text": "(You have decided to not sacrifice innocent lives)",
-			"speaker": "blue",
-		},
-	],
-	
 	"meeting_day_two-yes": [
 		{
 			"type": "text",
-			"text": "(It is now day two. Yesterday you decided to sacrifice innocent lives)",
+			"text": "Dr Pink... you mustn't regret the decision you made yesterday",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "I take full responsibility, of course",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Still... under the circumstances, it was a sound plan and I stand by it",
 			"speaker": "blue",
 		},
 	],
@@ -39,8 +33,34 @@
 	"meeting_day_two-no": [
 		{
 			"type": "text",
-			"text": "(It is now day two. Yesterday you decided to not sacrifice innocent lives)",
+			"text": "Good morning, Pink – have you come to veto yet another one of my plans?",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Well, you can't: sorry to disappoint, but I'm all out of ideas. Are you satisfied?",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "If you truly believe that we're going to save humanity without making some sacrifices...",
 			"speaker": "blue",
 		},
 	],
+	
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to launch a nuclear warhead at the moon)",
+			"speaker": "blue",
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to not launch a nuclear warhead at the moon)",
+			"speaker": "blue",
+		},
+	]
 }

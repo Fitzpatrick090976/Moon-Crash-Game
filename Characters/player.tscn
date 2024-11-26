@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbmutx2yjibsg"]
+[gd_scene load_steps=16 format=3 uid="uid://bbmutx2yjibsg"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/player.gd" id="1_7tiko"]
 [ext_resource type="Script" path="res://Scripts/Characters/player_camera.gd" id="2_2hjw5"]
@@ -7,6 +7,68 @@
 [ext_resource type="Script" path="res://Scripts/Characters/fog_detection.gd" id="5_e4vqf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bksyu"]
+
+[sub_resource type="Animation" id="Animation_d4o1v"]
+resource_name = "moon_encounter_start"
+length = 8.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_wlm0m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4egyg"]
+_data = {
+"RESET": SubResource("Animation_wlm0m"),
+"moon_encounter_start": SubResource("Animation_d4o1v")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cyab5"]
 atlas = ExtResource("3_u3e17")
@@ -54,6 +116,11 @@ shape = SubResource("CircleShape2D_bksyu")
 zoom = Vector2(4, 4)
 script = ExtResource("2_2hjw5")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerCamera"]
+libraries = {
+"": SubResource("AnimationLibrary_4egyg")
+}
+
 [node name="RotationMarker" type="Marker2D" parent="."]
 script = ExtResource("2_ip37x")
 
@@ -83,3 +150,5 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InitDialogue"]
 shape = SubResource("CircleShape2D_m7q4b")
+
+[connection signal="animation_finished" from="PlayerCamera/AnimationPlayer" to="PlayerCamera" method="_on_animation_player_animation_finished"]

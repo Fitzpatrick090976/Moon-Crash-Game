@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bhmdqs028advh"]
+[gd_scene load_steps=28 format=4 uid="uid://bhmdqs028advh"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level handler.gd" id="1_jmf05"]
 [ext_resource type="PackedScene" uid="uid://ba2beu3n0t505" path="res://Levels/moon_encounter.tscn" id="2_jtmso"]
@@ -79,8 +79,6 @@ sources/0 = SubResource("TileSetAtlasSource_g1aed")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nl180"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6cwqi"]
-
 [sub_resource type="Animation" id="Animation_sdpsx"]
 length = 0.001
 tracks/0/type = "value"
@@ -139,6 +137,7 @@ _data = {
 
 [node name="DayThree" type="Node2D"]
 script = ExtResource("1_jmf05")
+curr_level = "day_three"
 next_level = ExtResource("2_jtmso")
 
 [node name="Tilemap" type="Node2D" parent="."]
@@ -204,44 +203,12 @@ current_level = "day_three"
 dialogue_path = "res://Dialogue/JSON Files/Characters/blue.json"
 
 [node name="cyan" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(-112, -1168)
+position = Vector2(-16, -1424)
 character_name = "cyan"
 
 [node name="DialogueArea" parent="NPCs/cyan" instance=ExtResource("10_cw7ur")]
 current_level = "day_three"
 dialogue_path = "res://Dialogue/JSON Files/Characters/cyan.json"
-
-[node name="green" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(16, -1424)
-character_name = "green"
-
-[node name="DialogueArea" parent="NPCs/green" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/green.json"
-
-[node name="magenta" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(48, -1424)
-character_name = "magenta"
-
-[node name="DialogueArea" parent="NPCs/magenta" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/magenta.json"
-
-[node name="mint" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(-48, -1296)
-character_name = "mint"
-
-[node name="DialogueArea" parent="NPCs/mint" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/mint.json"
-
-[node name="orange" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(-16, -1296)
-character_name = "orange"
-
-[node name="DialogueArea" parent="NPCs/orange" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/orange.json"
 
 [node name="purple" parent="NPCs" instance=ExtResource("9_6e43r")]
 position = Vector2(16, -1296)
@@ -250,22 +217,6 @@ character_name = "purple"
 [node name="DialogueArea" parent="NPCs/purple" instance=ExtResource("10_cw7ur")]
 current_level = "day_three"
 dialogue_path = "res://Dialogue/JSON Files/Characters/purple.json"
-
-[node name="red" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(48, -1296)
-character_name = "red"
-
-[node name="DialogueArea" parent="NPCs/red" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/red.json"
-
-[node name="yellow" parent="NPCs" instance=ExtResource("9_6e43r")]
-position = Vector2(112, -1360)
-character_name = "yellow"
-
-[node name="DialogueArea" parent="NPCs/yellow" instance=ExtResource("10_cw7ur")]
-current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/yellow.json"
 
 [node name="Doors" type="Node2D" parent="."]
 z_index = 85
@@ -281,7 +232,7 @@ script = ExtResource("12_2sas0")
 
 [node name="DialogueArea" parent="Interactives/MeetingChair" instance=ExtResource("10_cw7ur")]
 current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Cutscenes/meeting_day_two.json"
+dialogue_path = "res://Dialogue/JSON Files/Cutscenes/meeting_day_three.json"
 
 [node name="MeetingTable" type="Node2D" parent="Interactives"]
 position = Vector2(0, -1360)
@@ -376,34 +327,6 @@ collision_mask = 134217728
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Text/Text3/Area2D"]
 shape = SubResource("CircleShape2D_nl180")
-
-[node name="Text4" type="Node2D" parent="Text"]
-position = Vector2(0, -1152)
-
-[node name="Label" type="Label" parent="Text/Text4"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -80.0
-offset_right = 80.0
-offset_bottom = 80.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("15_me7c3")
-text = "UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT."
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Area2D" type="Area2D" parent="Text/Text4"]
-collision_layer = 16
-collision_mask = 134217728
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Text/Text4/Area2D"]
-shape = SubResource("CircleShape2D_6cwqi")
 
 [node name="TransitionHandler" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)

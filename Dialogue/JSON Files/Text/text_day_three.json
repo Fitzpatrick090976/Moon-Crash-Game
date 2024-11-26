@@ -1,0 +1,31 @@
+{
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "(You have decided to launch a nuclear warhead at the moon)",
+		},
+		{
+			"type": "text",
+			"text": "(You have decided to launch a nuclear warhead at the moon)",
+		},
+		{
+			"type": "text",
+			"text": "(You have decided to launch a nuclear warhead at the moon)",
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+		{
+			"type": "text",
+			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+		},
+		{
+			"type": "text",
+			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+		},
+		{
+			"type": "text",
+			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+		},
+	],
+}

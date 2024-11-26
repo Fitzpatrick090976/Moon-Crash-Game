@@ -17,19 +17,45 @@
 		},
 	],
 	
-	"meeting_day_one-yes": [
+	"meeting_day_two-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to sacrifice innocent lives to try to stop the moon)",
+			"text": "They told me what happened yesterday, sir. I'm so sorry",
+			"speaker": "cyan",
+		},
+		{
+			"type": "text",
+			"text": "You couldn't have known that the plan would fail. It was an impossible choice",
 			"speaker": "cyan",
 		},
 	],
 	
-	"meeting_day_one-no": [
+	"meeting_day_two-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not sacrifice innocent lives)",
+			"text": "I heard about what happened yesterday, sir. About Dr Blue's plan",
+			"speaker": "cyan",
+		},
+		{
+			"type": "text",
+			"text": "I think you made the right call – there will be another solution, I know it",
 			"speaker": "cyan",
 		},
 	],
+	
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to launch a nuclear warhead at the moon)",
+			"speaker": "cyan",
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to not launch a nuclear warhead at the moon)",
+			"speaker": "cyan",
+		},
+	]
 }

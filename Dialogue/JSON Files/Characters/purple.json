@@ -32,4 +32,36 @@
 			"speaker": "purple",
 		},
 	],
+	
+	"meeting_day_two-yes": [
+		{
+			"type": "text",
+			"text": "(It is now day two. Yesterday you decided to sacrifice innocent lives)",
+			"speaker": "purple",
+		},
+	],
+	
+	"meeting_day_two-no": [
+		{
+			"type": "text",
+			"text": "(It is now day two. Yesterday you decided to not sacrifice innocent lives)",
+			"speaker": "purple",
+		},
+	],
+	
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to launch a nuclear warhead at the moon)",
+			"speaker": "purple",
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+		{
+			"type": "text",
+			"text": "(It is now day three. Yesterday you decided to not launch a nuclear warhead at the moon)",
+			"speaker": "purple",
+		},
+	]
 }

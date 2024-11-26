@@ -25,9 +25,10 @@ func _ready() -> void:
 		dialogue_key = CharacterKeyManager.manager[dialogue_path][current_level]
 	var json = JsonManager.load_json(dialogue_path)
 	var line_count = 0
-	if json.has(dialogue_key):
-		for text in get_children():
-			for label in text.get_children():
-				if label is Label:
-					label.text = json[dialogue_key][line_count]["text"]
-					line_count += 1
+	if json is Dictionary:
+		if json.has(dialogue_key):
+			for text in get_children():
+				for label in text.get_children():
+					if label is Label:
+						label.text = json[dialogue_key][line_count]["text"]
+						line_count += 1

@@ -5,8 +5,7 @@ extends CanvasLayer
 @onready var choice_1: Button = $MarginContainer/MarginContainer/VBoxContainer/Choice1
 @onready var choice_2: Button = $MarginContainer/MarginContainer/VBoxContainer/Choice2
 @onready var panel: Panel = $MarginContainer/Panel
-
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 var curr_key: String
@@ -76,6 +75,7 @@ func show_curr_line():
 		choice_1.visible = false
 		choice_2.visible = false
 		text_label.text = curr_line["text"]
+		animation_player.play("typing animation")
 		
 		
 	elif curr_line["type"] == "choice":

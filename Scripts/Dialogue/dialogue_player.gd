@@ -111,6 +111,10 @@ func show_curr_line():
 		elif cmd == "update":
 			SignalBus.update_character_key_manager.emit(curr_line["update"], curr_line["dest"])
 			advance_to_next_line()
+		elif cmd == "continue":
+			curr_key = curr_line["continue"]
+			curr_line_count = 0
+			show_curr_line()
 
 func advance_to_next_line():
 	curr_line_count += 1

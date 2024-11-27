@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://ba2beu3n0t505"]
+[gd_scene load_steps=19 format=4 uid="uid://ba2beu3n0t505"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/level handler.gd" id="1_uqe2e"]
 [ext_resource type="TileSet" uid="uid://b0paq5u3vnm4t" path="res://Tilemap/Background.tres" id="2_chsae"]
+[ext_resource type="PackedScene" uid="uid://cvgwafwnswtnd" path="res://Levels/end.tscn" id="2_tshh7"]
 [ext_resource type="TileSet" uid="uid://bjcy6lj02xtae" path="res://Tilemap/CollisionLayer.tres" id="3_2dm5j"]
 [ext_resource type="PackedScene" uid="uid://y5os2mm4ktym" path="res://Characters/calamitas.tscn" id="3_c20u2"]
 [ext_resource type="Script" path="res://Scripts/Interactives/init_cutscene.gd" id="6_gnk3t"]
@@ -77,6 +78,7 @@ _data = {
 [node name="MoonEncounter" type="Node2D"]
 script = ExtResource("1_uqe2e")
 curr_level = "moon_encounter"
+next_level = ExtResource("2_tshh7")
 
 [node name="Tilemap" type="Node2D" parent="."]
 

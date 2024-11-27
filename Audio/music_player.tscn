@@ -1,8 +1,70 @@
-[gd_scene load_steps=2 format=3 uid="uid://rqecums2mvng"]
+[gd_scene load_steps=7 format=3 uid="uid://rqecums2mvng"]
 
 [ext_resource type="Script" path="res://Scripts/Audio/music_player.gd" id="1_brijx"]
+[ext_resource type="AudioStream" uid="uid://cklio2ksgrs3v" path="res://Audio/Music/DayOne.wav" id="1_x3pig"]
+
+[sub_resource type="Animation" id="Animation_au7pj"]
+resource_name = "fade_in"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1ccws"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
+
+[sub_resource type="Animation" id="Animation_hcc7g"]
+resource_name = "fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inyk0"]
+_data = {
+"RESET": SubResource("Animation_1ccws"),
+"fade_in": SubResource("Animation_au7pj"),
+"fade_out": SubResource("Animation_hcc7g")
+}
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_x3pig")
+volume_db = -80.0
 script = ExtResource("1_brijx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_inyk0")
+}
+
+[connection signal="finished" from="." to="." method="_on_finished"]

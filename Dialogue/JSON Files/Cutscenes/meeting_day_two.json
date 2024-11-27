@@ -46,7 +46,148 @@
 		},
 		{
 			"type": "text",
-			"text": "(Launch a nuclear warhead at the moon and risk the debris falling back to the planet?)",
+			"text": "Let the record show that Dr Pink has now joined the meeting",
+			"speaker": "magenta"
+		},
+		{
+			"type": "text",
+			"text": "Unfortunately, Dr Green and Dr Red will not be joining us today",
+			"speaker": "magenta"
+		},
+		{
+			"type": "text",
+			"text": "And Dr Yellow...?",
+			"speaker": "orange"
+		},
+		{
+			"type": "text",
+			"text": "He resigned last night",
+			"speaker": "magenta"
+		},
+		{
+			"type": "text",
+			"text": "Okay, look – I know what transpired yesterday with the crew of the Shepherd is probably on everyone's minds right now –",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "Say their names",
+			"speaker": "mint"
+		},
+		{
+			"type": "text",
+			"text": "Excuse me...?",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "Say the names of the people who died for nothing because of your plan. Say at least one name",
+			"speaker": "mint"
+		},
+		{
+			"type": "text",
+			"text": "Or do you not know any of their names? You don't, do you?",
+			"speaker": "mint"
+		},
+		{
+			"type": "text",
+			"text": "Now that's just completely –",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "Enough! Be quiet, both of you!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "I too am saddened by what happened yesterday, but the fate of our entire civilisation is at stake. We need to do something",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "There's nothing to be done",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "Now that's just unproductive!",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Dr Blue, in all your years of professional experience have you ever encountered a space rock capable of correcting its course once diverted?",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "This is no ordinary moon. We meddle in matters beyond our understanding",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "Well, that may be true... but Dr Purple, surely we have an obligation to try and stop it? Surely we have to try?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "It makes no significant difference",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "God, I can't stand another word of this fatalist drivel!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Come on, people – we're the world's foremost experts in our fields. Surely we can think of something!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "What if – what about the thing Red said yesterday?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "I don't recall",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "You mean... \"blow it to smithereens\"?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Yes, exactly! Why don't we just destroy the moon using some kind of explosives?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "\"Why don't we\"? Because it's never been attempted before, that's why. We have no idea what kind of results to expect",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Can it be any worse than the destruction of humanity?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "For all we know, it could accomplish the same result – debris from the moon would probably come crashing down and destroy the planet",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "What choice do we have? Is it better to stand by and simply get obliterated?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Pink – surely you agree that this is the correct course of action?",
+			"speaker": "mint",
 		},
 		{
 			"type": "choice",
@@ -70,7 +211,143 @@
 		},
 		{
 			"type": "text",
-			"text": "(Launch a nuclear warhead at the moon and risk the debris falling back to the planet?)",
+			"text": "Let the record show that Dr Pink has now joined the meeting",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Unfortunately, Dr Green and Dr Red will not be joining us today",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "And Dr Yellow...?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "He resigned last night",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "Forget them – we don't need them. All we need is a solid plan",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Oh, is that all? I daresay we had one yesterday until you shot it down",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Dr Blue, behave yourself!",
+			"speaker": "magenta",
+		},
+		{
+			"type": "text",
+			"text": "I simply refuse to use human lives as instruments for our own means -- is that so difficult to understand?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "What exactly do you think is going to happen to the crew of the Shepherd once the moon collides with our planet?",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Even if their spacecraft isn't immediately incinerated –",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Enough! Be quiet, both of you!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "The fate of our entire civilisation is at stake. We need to do something",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "There's nothing to be done",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "Now that's just unproductive!",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "This is no ordinary moon. We meddle in matters beyond our understanding",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "Well, that may be true... but Dr Purple, surely we have an obligation to try and stop it? Surely we have to try?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "It makes no significant difference",
+			"speaker": "purple",
+		},
+		{
+			"type": "text",
+			"text": "God, I can't stand another word of this fatalist drivel!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Come on, people – we're the world's foremost experts in our fields. Surely we can think of something!",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "What if – what about the thing Red said yesterday?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "I don't recall",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "You mean... \"blow it to smithereens\"?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Yes, exactly! Why don't we just destroy the moon using some kind of explosives?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "\"Why don't we\"? Because it's never been attempted before, that's why. We have no idea what kind of results to expect",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Can it be any worse than the destruction of humanity?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "For all we know, it could accomplish the same result – debris from the moon would probably come crashing down and destroy the planet",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "What choice do we have? Is it better to stand by and simply get obliterated?",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Pink – surely you agree that this is the correct course of action?",
+			"speaker": "mint",
 		},
 		{
 			"type": "choice",
@@ -90,7 +367,18 @@
 	"meeting_day_two-x-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to launch a nuclear warhead at the moon)",
+			"text": "This is a mistake. There must be a better way",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "Well, unless you have something better... I think it's a promising plan",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "As do I – I'll make the arrangements",
+			"speaker": "mint",
 		},
 		{
 			"type": "cmd",
@@ -107,7 +395,13 @@
 	"meeting_day_two-x-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+			"text": "Oh – thank you, Dr Pink. I didn't think you'd agree with me",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "I hope you haven't doomed us all...",
+			"speaker": "orange",
 		},
 		{
 			"type": "cmd",

@@ -42,4 +42,30 @@
 			"speaker": "mint",
 		},
 	],
+	
+	"meeting_day_three-x-yes": [
+		{
+			"type": "text",
+			"text": "I'm sorry... I really thought that it would work",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "I hope you've got something up your sleeve this time. There isn't much time",
+			"speaker": "mint",
+		},
+	],
+	
+	"meeting_day_three-x-no": [
+		{
+			"type": "text",
+			"text": "That bastard Blue... we might be saved by now if not for his petty technicalities",
+			"speaker": "mint",
+		},
+		{
+			"type": "text",
+			"text": "Why the hell did you take his side, Pink? Don't you want to live?",
+			"speaker": "mint",
+		},
+	]
 }

@@ -1,5 +1,5 @@
 {
-	"meeting_day_three-x-yes": [
+	"meeting_day_three-default": [
 		{
 			"type": "text",
 			"text": "(Begin the meeting?)",
@@ -9,7 +9,7 @@
 			"choice": [
 				{
 					"answer": "Yes",
-					"response": "meeting_day_three-x-yes-start",
+					"response": "meeting_day_three-default-start",
 				},
 				{
 					"answer": "I'm not ready",
@@ -19,49 +19,70 @@
 		},
 	],
 	
-	"meeting_day_three-x-no": [
-	{
-			"type": "text",
-			"text": "(Begin the meeting?)",
-		},
-		{
-			"type": "choice",
-			"choice": [
-				{
-					"answer": "Yes",
-					"response": "meeting_day_three-x-no-start",
-				},
-				{
-					"answer": "I'm not ready",
-					"response": "none",
-				},
-			],
-		},
-	],
-	
-	"meeting_day_three-x-yes-start": [
+	"meeting_day_three-default-start": [
 		{
 			"type": "cmd",
 			"cmd": "start",
 		},
 		{
 			"type": "text",
-			"text": "(Everything is hopeless)",
-		},
-		{
-			"type": "cmd",
-			"cmd": "transition",
-		},
-	],
-	
-	"meeting_day_three-x-no-start": [
-		{
-			"type": "cmd",
-			"cmd": "start",
+			"text": "Well... I suppose this is it, then",
+			"speaker": "blue"
 		},
 		{
 			"type": "text",
-			"text": "(Everything is hopeless)",
+			"text": "Realistically is there anything we can do at this point​?",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "No, I don't think so",
+			"speaker": "mint"
+		},
+		{
+			"type": "text",
+			"text": "There never was",
+			"speaker": "purple"
+		},
+		{
+			"type": "text",
+			"text": "Oh, come on...! So you're both just giving up? And you too, Pink?",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "There's no need to despair. What are you afraid of?",
+			"speaker": "purple"
+		},
+		{
+			"type": "text",
+			"text": "Is that a serious question? I'm afraid of everything and everyone I've ever known being reduced to ash!",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "I refuse to accept this. I –",
+			"speaker": "blue"
+		},
+		{
+			"type": "text",
+			"text": "...",
+		},
+		{
+			"type": "text",
+			"text": "(You look around and notice that everyone in the room is completely still)",
+		},
+		{
+			"type": "text",
+			"text": "(It appears as if they're frozen)",
+		},
+		{
+			"type": "text",
+			"text": "(Suddenly you hear something coming from outside the lab... music?)",
+		},
+		{
+			"type": "text",
+			"text": "(You go outside to investigate)"
 		},
 		{
 			"type": "cmd",

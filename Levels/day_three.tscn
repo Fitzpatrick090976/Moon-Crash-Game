@@ -202,13 +202,13 @@ character_name = "blue"
 current_level = "day_three"
 dialogue_path = "res://Dialogue/JSON Files/Characters/blue.json"
 
-[node name="cyan" parent="NPCs" instance=ExtResource("9_6e43r")]
+[node name="mint" parent="NPCs" instance=ExtResource("9_6e43r")]
 position = Vector2(-16, -1424)
-character_name = "cyan"
+character_name = "mint"
 
-[node name="DialogueArea" parent="NPCs/cyan" instance=ExtResource("10_cw7ur")]
+[node name="DialogueArea" parent="NPCs/mint" instance=ExtResource("10_cw7ur")]
 current_level = "day_three"
-dialogue_path = "res://Dialogue/JSON Files/Characters/cyan.json"
+dialogue_path = "res://Dialogue/JSON Files/Characters/mint.json"
 
 [node name="purple" parent="NPCs" instance=ExtResource("9_6e43r")]
 position = Vector2(16, -1296)
@@ -232,6 +232,7 @@ script = ExtResource("12_2sas0")
 
 [node name="DialogueArea" parent="Interactives/MeetingChair" instance=ExtResource("10_cw7ur")]
 current_level = "day_three"
+dialogue_key = "meeting_day_three-default"
 dialogue_path = "res://Dialogue/JSON Files/Cutscenes/meeting_day_three.json"
 
 [node name="MeetingTable" type="Node2D" parent="Interactives"]

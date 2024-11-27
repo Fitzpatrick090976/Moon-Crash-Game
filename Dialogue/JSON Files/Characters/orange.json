@@ -31,7 +31,17 @@
 	"meeting_day_two-yes": [
 		{
 			"type": "text",
-			"text": "(It is now day two. Yesterday you decided to sacrifice innocent lives)",
+			"text": "Dr Pink... we sent those brave men and women to their deaths, and for what?",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Why didn't you listen to me...? No good can possibly come from such a terrible sacrifice ",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "We cannot give up. We must find a way",
 			"speaker": "orange",
 		},
 	],
@@ -39,7 +49,12 @@
 	"meeting_day_two-no": [
 		{
 			"type": "text",
-			"text": "(It is now day two. Yesterday you decided to not sacrifice innocent lives)",
+			"text": "Dr Pink... I appreciate that you listened to me yesterday",
+			"speaker": "orange",
+		},
+		{
+			"type": "text",
+			"text": "Hope is not lost. We will find a way",
 			"speaker": "orange",
 		},
 	],

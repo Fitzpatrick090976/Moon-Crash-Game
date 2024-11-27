@@ -51,7 +51,12 @@
 	"meeting_day_three-x-yes": [
 		{
 			"type": "text",
-			"text": "(It is now day three. Yesterday you decided to launch a nuclear warhead at the moon)",
+			"text": "To tell you the truth, Pink... I know I made a fuss yesterday, but a part of me really thought the explosives would work",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "My god... what is there left to do?",
 			"speaker": "blue",
 		},
 	],
@@ -59,7 +64,12 @@
 	"meeting_day_three-x-no": [
 		{
 			"type": "text",
-			"text": "(It is now day three. Yesterday you decided to not launch a nuclear warhead at the moon)",
+			"text": "I was wrong, Pink... the explosives were a decent idea and we should have tried it",
+			"speaker": "blue",
+		},
+		{
+			"type": "text",
+			"text": "My god... what is wrong with me? Why didn't we try it?",
 			"speaker": "blue",
 		},
 	]

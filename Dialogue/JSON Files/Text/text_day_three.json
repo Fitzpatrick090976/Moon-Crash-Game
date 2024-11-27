@@ -2,30 +2,30 @@
 	"meeting_day_three-x-yes": [
 		{
 			"type": "text",
-			"text": "(You have decided to launch a nuclear warhead at the moon)",
+			"text": "THE EXPLOSIONS DID NOT SUCCESSFULLY DESTROY THE MOON",
 		},
 		{
 			"type": "text",
-			"text": "(You have decided to launch a nuclear warhead at the moon)",
+			"text": "THESE ARE YOUR FINAL HOURS",
 		},
 		{
 			"type": "text",
-			"text": "(You have decided to launch a nuclear warhead at the moon)",
+			"text": "USE THEM HOWEVER YOU WISH",
 		},
 	],
 	
 	"meeting_day_three-x-no": [
 		{
 			"type": "text",
-			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+			"text": "THE MOON IS SOON APPROACHING",
 		},
 		{
 			"type": "text",
-			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+			"text": "THESE ARE YOUR FINAL HOURS",
 		},
 		{
 			"type": "text",
-			"text": "(You have decided to not launch a nuclear warhead at the moon)",
+			"text": "USE THEM HOWEVER YOU WISH",
 		},
 	],
 }

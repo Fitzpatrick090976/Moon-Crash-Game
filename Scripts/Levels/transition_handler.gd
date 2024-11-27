@@ -9,7 +9,7 @@ func _ready() -> void:
 	SignalBus.level_end.connect(_on_level_end)
 
 
-func _on_level_start():
+func _on_level_start(curr_level: String):
 	animation_player.play("fade_in")
 
 

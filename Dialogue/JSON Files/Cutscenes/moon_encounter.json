@@ -36,6 +36,11 @@
 			"type": "text",
 			"text": "INTERESTING. NICE TO MEET YOU, DR PINK. I AM A SPACE ROCK AND DO NOT HAVE A NAME",
 		},
+		{
+			"type": "cmd",
+			"cmd": "continue",
+			"continue": "moon_encounter-continue1",
+		}
 	],
 	
 	"moon_encounter-choice2": [
@@ -47,5 +52,129 @@
 			"type": "text",
 			"text": "YOU CANNOT",
 		},
+		{
+			"type": "cmd",
+			"cmd": "continue",
+			"continue": "moon_encounter-continue1",
+		}
 	],
+	
+	"moon_encounter-continue1": [
+		{
+			"type": "text",
+			"text": "LIKE YOU, I AM BOUND BY CERTAIN LAWS OF OUR SHARED REALITY. THOSE LAWS COMPEL ME TO COLLIDE WITH YOUR PLANET IN 2.4 MILLISECONDS",
+		},
+		{
+			"type": "text",
+			"text": "IT WILL MEAN MY DEATH, ALONG WITH YOUR PLANET'S AND ITS INHABITANTS",
+		},
+		{
+			"type": "text",
+			"text": "(You stare into the moon; its glow is so bright that it makes your eyes burn)",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "You're evil",
+					"response": "moon_encounter-continue2",
+				},
+				{
+					"answer": "Aren't you scared to die?",
+					"response": "moon_encounter-continue2",
+				}
+			]
+		},
+	],
+	
+	"moon_encounter-continue2": [
+		{
+			"type": "text",
+			"text": "I AM A MOON. MY HEART IS NICKEL, MY VEINS ARE ICE. MY CRATERS TELL THE STORY OF WHO I AM AND WHERE I'VE BEEN",
+		},
+		{
+			"type": "text",
+			"text": "I CANNOT FEAR. I CANNOT LOVE. I CANNOT HATE. NOT IN THE SAME WAY YOU CAN, LITTLE HUMAN",
+		},
+		{
+			"type": "text",
+			"text": "I AM INDIFFERENT TO ALL SUFFERING, ACCEPTING OF ALL PAIN. I CANNOT BE ANY OTHER WAY",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "But I tried so hard",
+					"response": "moon_encounter-choice3",
+				},
+				{
+					"answer": "Please don't do this",
+					"response": "moon_encounter-choice4",
+				}
+			]
+		},
+	],
+	
+	"moon_encounter-choice3": [
+		{
+			"type": "text",
+			"text": "YOU DID EXACTLY WHAT YOU WERE SUPPOSED TO DO. YOU COULD NOT HAVE ACTED DIFFERENTLY",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "So what's the point?",
+					"response": "moon_encounter-continue3",
+				},
+				{
+					"answer": "I am worthless",
+					"response": "moon_encounter-continue3",
+				}
+			]
+		},
+	],
+	
+	"moon_encounter-choice4": [
+		{
+			"type": "text",
+			"text": "BUT IT IS ALREADY DONE, AS IS ALL OTHER THINGS",
+		},
+		{
+			"type": "text",
+			"text": "THE DEATH OF THE UNIVERSE, THE BIRTH OF EVERYTHING YOU KNOW – ALL ARE HAPPENING, HAVE HAPPENED, WILL HAPPEN",
+		},
+		{
+			"type": "text",
+			"text": "I CANNOT UNDO WHAT HAS ALREADY BEEN DONE. I AM JUST A MOON",
+		},
+		{
+			"type": "choice",
+			"choice": [
+				{
+					"answer": "So what's the point?",
+					"response": "moon_encounter-continue3",
+				},
+				{
+					"answer": "I am worthless",
+					"response": "moon_encounter-continue3",
+				}
+			]
+		},
+	],
+	
+	"moon_encounter-continue3": [
+		{
+			"type": "text",
+			"text": "TIME SPENT IN THE PURSUIT OF SOMETHING MEANINGFUL IS NOT TIME WASTED"
+		},
+		{
+			"type": "text",
+			"text": "IT IS TIME FOR ME TO DESTROY YOUR PLANET. GOODBYE"
+		},
+		{
+			"type": "cmd",
+			"cmd": "transition",
+		},
+	]
 }
